@@ -22,21 +22,13 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
 
   return (
     <>
-      {/* Backdrop */}
       <div 
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-500 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         onClick={onClose}
       />
-
-      {/* Drawer Panel */}
       <div 
-        className={`
-          fixed inset-y-0 left-0 z-50 w-full md:w-[400px] glass-heavy border-r border-white/10
-          transform transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) flex flex-col
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        `}
+        className={`fixed inset-y-0 left-0 z-50 w-full md:w-[400px] glass-heavy border-r border-white/10 transform transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) flex flex-col ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        {/* Header */}
         <div className="p-8 pb-4">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-light tracking-tight text-white">Explore</h2>
@@ -46,8 +38,6 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
               </svg>
             </button>
           </div>
-
-          {/* Search */}
           <div className="relative group">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg className="h-5 w-5 text-gray-500 group-focus-within:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,13 +52,11 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
               className="block w-full pl-10 pr-3 py-3 border border-white/10 rounded-xl leading-5 bg-white/5 text-gray-300 placeholder-gray-500 focus:outline-none focus:bg-white/10 focus:ring-1 focus:ring-white/20 focus:text-white sm:text-sm transition-all"
             />
           </div>
-
-          {/* List */}
-          <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-1">
+        </div>
+        <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-1">
           <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-4 mt-2">
             {filteredCameras.length} Locations
           </div>
-          
           {filteredCameras.map((cam, idx) => (
             <button
               key={`${cam.id}-${idx}`}
@@ -76,10 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
                 onSelectCamera(cam);
                 onClose();
               }}
-              className={`
-                w-full text-left p-4 rounded-2xl transition-all group relative overflow-hidden flex items-center gap-4
-                ${selectedCameraId === cam.id ? 'bg-white/10' : 'hover:bg-white/5'}
-              `}
+              className={`w-full text-left p-4 rounded-2xl transition-all group relative overflow-hidden flex items-center gap-4 ${selectedCameraId === cam.id ? 'bg-white/10' : 'hover:bg-white/5'}`}
             >
               <div className="w-32 h-20 rounded-xl bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
                 <iframe
@@ -97,7 +82,6 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
                   {cam.location}
                 </p>
               </div>
-              
               {selectedCameraId === cam.id && (
                 <div className="flex items-center gap-2 flex-shrink-0">
                    <div className="flex space-x-1">
