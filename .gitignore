@@ -1,0 +1,32 @@
+# Node
+node_modules
+/.npm
+npm-debug.log*
+
+# Build
+dist/
+build/
+.vite/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Backup data
+services/*.json
+__pycache__/
+*.pyc

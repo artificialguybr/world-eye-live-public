@@ -1,0 +1,5 @@
+{
+  "name": "WorldEyeMap",
+  "description": "Real-time webcam viewer featuring 600+ YouTube live streams from around the world.",
+  "requestFramePermissions": []
+}
