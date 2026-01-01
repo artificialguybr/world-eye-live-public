@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { CAMERAS } from '../constants';
-import { Camera, CameraCategory } from '../types';
+import { Camera } from '../types';
 
 interface SidebarProps {
   selectedCameraId: string;
@@ -10,17 +10,15 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isOpen, onClose }) => {
-  const [activeCategory, setActiveCategory] = useState<CameraCategory | 'All'>('All');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredCameras = useMemo(() => {
     return CAMERAS.filter(c => {
-      const matchesCategory = activeCategory === 'All' || c.category === activeCategory;
-      const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             c.location.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
+      return matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [searchQuery]);
 
   return (
     <>
@@ -65,28 +63,8 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
             />
           </div>
 
-          {/* Categories */}
-          <div className="flex gap-2 mt-6 overflow-x-auto pb-2 scrollbar-hide">
-            <button
-              onClick={() => setActiveCategory('All')}
-              className={`px-4 py-1.5 text-xs font-medium rounded-full transition-all border ${activeCategory === 'All' ? 'bg-white text-black border-white' : 'bg-transparent text-gray-400 border-white/10 hover:border-white/30'}`}
-            >
-              All
-            </button>
-            {Object.values(CameraCategory).map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 text-xs font-medium rounded-full whitespace-nowrap transition-all border ${activeCategory === cat ? 'bg-white text-black border-white' : 'bg-transparent text-gray-400 border-white/10 hover:border-white/30'}`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* List */}
-        <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-1">
+          {/* List */}
+          <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-1">
           <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-4 mt-2">
             {filteredCameras.length} Locations
           </div>
