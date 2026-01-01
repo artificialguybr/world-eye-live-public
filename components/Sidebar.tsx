@@ -77,28 +77,29 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
                 onClose();
               }}
               className={`
-                w-full text-left p-4 rounded-2xl transition-all group relative overflow-hidden flex items-center justify-between
+                w-full text-left p-4 rounded-2xl transition-all group relative overflow-hidden flex items-center gap-4
                 ${selectedCameraId === cam.id ? 'bg-white/10' : 'hover:bg-white/5'}
               `}
             >
-              <div className="flex items-center gap-4">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${selectedCameraId === cam.id ? 'bg-white text-black' : 'bg-white/10 text-white group-hover:bg-white/20'}`}>
-                  {cam.category === 'City' && <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>}
-                  {cam.category === 'Nature' && <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>}
-                  {cam.category !== 'City' && cam.category !== 'Nature' && <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>}
-                </div>
-                <div>
-                  <h3 className={`text-sm font-medium ${selectedCameraId === cam.id ? 'text-white' : 'text-gray-200 group-hover:text-white'}`}>
-                    {cam.name}
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-0.5 group-hover:text-gray-400 transition-colors">
-                    {cam.location}
-                  </p>
-                </div>
+              <div className="w-32 h-20 rounded-xl bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <iframe
+                  title={cam.name}
+                  className="w-full h-full object-cover"
+                  src={`https://img.youtube.com/vi/${cam.youtubeId}/mqdefault.jpg`}
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className={`text-sm font-medium ${selectedCameraId === cam.id ? 'text-white' : 'text-gray-200 group-hover:text-white'}`}>
+                  {cam.name}
+                </h3>
+                <p className="text-xs text-gray-500 mt-0.5 group-hover:text-gray-400 transition-colors">
+                  {cam.location}
+                </p>
               </div>
               
               {selectedCameraId === cam.id && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-shrink-0">
                    <div className="flex space-x-1">
                       <div className="w-1 h-1 bg-green-500 rounded-full animate-bounce"></div>
                       <div className="w-1 h-1 bg-green-500 rounded-full animate-bounce delay-75"></div>
