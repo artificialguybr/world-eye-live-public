@@ -108,7 +108,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       </div>
 
       {/* Map Actions (List & Shuffle) */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex gap-4 transition-opacity duration-500">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[9999] flex gap-4 transition-opacity duration-500">
          <button 
            onClick={onOpenList}
            className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 transition-all group"

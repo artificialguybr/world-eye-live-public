@@ -20,6 +20,8 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
     });
   }, [searchQuery]);
 
+  if (!isOpen) return null;
+
   return (
     <>
       <div 
@@ -30,8 +32,8 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
         className={`fixed inset-y-0 left-0 z-50 w-full md:w-[400px] glass-heavy border-r border-white/10 transform transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) flex flex-col ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className="p-8 pb-4">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-light tracking-tight text-white">Explore</h2>
+          <div className="flex justify-between items-center mb-4 md:mb-6">
+            <h2 className="text-xl md:text-2xl font-light tracking-tight text-white">Explore</h2>
             <button onClick={onClose} className="p-2 rounded-full hover:bg-white/10 transition-colors">
               <svg className="w-6 h-6 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -54,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
           </div>
         </div>
         <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-1">
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-4 mt-2">
+          <div className="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 md:mb-3 px-3 md:px-4 mt-2">
             {filteredCameras.length} Locations
           </div>
           {filteredCameras.map((cam, idx) => (
@@ -64,11 +66,11 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
                 onSelectCamera(cam);
                 onClose();
               }}
-              className={`w-full text-left p-4 rounded-2xl transition-all group relative overflow-hidden flex items-center gap-4 ${selectedCameraId === cam.id ? 'bg-white/10' : 'hover:bg-white/5'}`}
+              className={`w-full text-left p-3 md:p-4 rounded-xl md:rounded-2xl transition-all group relative overflow-hidden flex items-center gap-3 md:gap-4 ${selectedCameraId === cam.id ? 'bg-white/10' : 'hover:bg-white/5'}`}
             >
               <div className="w-32 h-20 rounded-xl bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
-                <iframe
-                  title={cam.name}
+                <img
+                  alt={cam.name}
                   className="w-full h-full object-cover"
                   src={`https://img.youtube.com/vi/${cam.youtubeId}/mqdefault.jpg`}
                   loading="lazy"
