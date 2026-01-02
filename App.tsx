@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Sidebar from './components/Sidebar';
 import WorldMap from './components/WorldMap';
 import LivePlayer from './components/LivePlayer';
@@ -22,6 +22,49 @@ const App: React.FC = () => {
     setIframeLoaded(false);
     setShowMinimap(false);
   }, [activeCamera?.id]);
+
+  const handleCameraSelect = (camera: Camera) => {
+    // Cinematic fly-to zoom into camera location before switching views
+    if (mapInstance && camera.coordinates) {
+      const currentZoom = mapInstance.getZoom();
+      const targetZoom = 12;
+
+      mapInstance.flyTo({
+        center: [camera.coordinates.lng, camera.coordinates.lat],
+        zoom: targetZoom,
+        pitch: 45,
+        bearing: 0,
+        duration: 2000,
+        essential: true,
+        curve: 1.42
+      });
+
+      const duration = Math.max(2000, (targetZoom - currentZoom) * 300);
+
+      setTimeout(() => {
+        setActiveCamera(camera);
+        setViewMode('immersive');
+        setIsSidebarOpen(false);
+        setShowMinimap(false);
+      }, duration - 500);
+    } else {
+      setActiveCamera(camera);
+      setViewMode('immersive');
+      setIsSidebarOpen(false);
+      setShowMinimap(false);
+    }
+  };
+
+  const handleShuffle = useCallback(() => {
+    if (!activeCamera) return;
+    const currentIndex = CAMERAS.findIndex(c => c.id === activeCamera.id);
+    let nextIndex = Math.floor(Math.random() * CAMERAS.length);
+    while (nextIndex === currentIndex && CAMERAS.length > 1) {
+      nextIndex = Math.floor(Math.random() * CAMERAS.length);
+    }
+    setActiveCamera(CAMERAS[nextIndex]);
+    if (viewMode === 'map') setViewMode('immersive');
+  }, [activeCamera, viewMode]);
 
   // Keyboard and mouse navigation for shuffle
   useEffect(() => {
@@ -64,49 +107,6 @@ const App: React.FC = () => {
       window.removeEventListener('touchend', handleTouchEnd);
     };
   }, [activeCamera, handleShuffle]);
-
-  const handleCameraSelect = (camera: Camera) => {
-    // Cinematic fly-to zoom into camera location before switching views
-    if (mapInstance && camera.coordinates) {
-      const currentZoom = mapInstance.getZoom();
-      const targetZoom = 12;
-
-      mapInstance.flyTo({
-        center: [camera.coordinates.lng, camera.coordinates.lat],
-        zoom: targetZoom,
-        pitch: 45,
-        bearing: 0,
-        duration: 2000,
-        essential: true,
-        curve: 1.42
-      });
-
-      const duration = Math.max(2000, (targetZoom - currentZoom) * 300);
-
-      setTimeout(() => {
-        setActiveCamera(camera);
-        setViewMode('immersive');
-        setIsSidebarOpen(false);
-        setShowMinimap(false);
-      }, duration - 500);
-    } else {
-      setActiveCamera(camera);
-      setViewMode('immersive');
-      setIsSidebarOpen(false);
-      setShowMinimap(false);
-    }
-  };
-
-  const handleShuffle = () => {
-    if (!activeCamera) return;
-    const currentIndex = CAMERAS.findIndex(c => c.id === activeCamera.id);
-    let nextIndex = Math.floor(Math.random() * CAMERAS.length);
-    while (nextIndex === currentIndex && CAMERAS.length > 1) {
-      nextIndex = Math.floor(Math.random() * CAMERAS.length);
-    }
-    setActiveCamera(CAMERAS[nextIndex]);
-    if (viewMode === 'map') setViewMode('immersive');
-  };
 
   return (
     <div className="relative h-screen w-screen bg-black text-white overflow-hidden font-sans selection:bg-white/20">
