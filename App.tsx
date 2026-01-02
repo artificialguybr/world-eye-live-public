@@ -157,11 +157,11 @@ const App: React.FC = () => {
               </div>
             )}
 
-            <div className="glass-panel px-2 py-2 rounded-2xl flex items-center gap-1 scale-90 md:scale-100 transition-all duration-300 hover:scale-105 hover:bg-black/60">
+            <div className="glass-panel px-2 py-2 rounded-2xl flex items-center gap-1 md:scale-100 transition-all duration-300">
 
               <button
                 onClick={() => setIsSidebarOpen(true)}
-                className="p-4 rounded-xl hover:bg-white/10 text-white/80 hover:text-white transition-all group flex flex-col items-center gap-1 w-20"
+                className="p-4 rounded-xl hover:bg-white/10 text-white/80 hover:text-white transition-all group flex flex-col items-center gap-1 w-20 active:scale-95 cursor-pointer"
               >
                 <svg className="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
@@ -173,7 +173,7 @@ const App: React.FC = () => {
 
               <button
                 onClick={handleShuffle}
-                className="p-4 rounded-xl hover:bg-white/10 text-white/80 hover:text-white transition-all group flex flex-col items-center gap-1 w-20"
+                className="p-4 rounded-xl hover:bg-white/10 text-white/80 hover:text-white transition-all group flex flex-col items-center gap-1 w-20 active:scale-95 cursor-pointer"
               >
                 <svg className="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -185,7 +185,7 @@ const App: React.FC = () => {
 
               <button
                 onClick={() => setShowMinimap(!showMinimap)}
-                className={`p-4 rounded-xl transition-all group flex flex-col items-center gap-1 w-20 ${showMinimap ? 'bg-white/10 text-white' : 'hover:bg-white/10 text-white/80 hover:text-white'}`}
+                className={`p-4 rounded-xl transition-all group flex flex-col items-center gap-1 w-20 active:scale-95 cursor-pointer ${showMinimap ? 'bg-white/10 text-white' : 'hover:bg-white/10 text-white/80 hover:text-white'}`}
               >
                 <svg className="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />

@@ -150,25 +150,25 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       </div>
 
       {/* Map Actions (List & Shuffle) */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[9999] flex gap-3 px-4">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[9999] flex gap-3 px-4 pointer-events-none">
          <button
            onClick={handleOpenList}
-           className="glass px-6 py-4 md:px-8 md:py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 active:scale-95 transition-all duration-150 group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation min-h-[52px] md:min-h-[48px]"
+           className="glass px-5 py-3 md:px-7 md:py-3 rounded-2xl flex items-center justify-center gap-2 hover:bg-white/10 active:bg-white/20 active:scale-95 transition-all duration-150 group cursor-pointer touch-manipulation min-w-[120px] md:min-w-[130px] min-h-[48px] pointer-events-auto"
          >
-            <svg className="w-5 h-5 text-gray-400 group-hover:text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <span className="text-xs md:text-[11px] font-semibold tracking-wider uppercase text-white pointer-events-none">Locations</span>
+            <span className="text-xs md:text-[11px] font-semibold tracking-wider uppercase text-white whitespace-nowrap">Locations</span>
          </button>
 
          <button
            onClick={handleShuffle}
-           className="glass px-6 py-4 md:px-8 md:py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 active:scale-95 transition-all duration-150 group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation min-h-[52px] md:min-h-[48px]"
+           className="glass px-5 py-3 md:px-7 md:py-3 rounded-2xl flex items-center justify-center gap-2 hover:bg-white/10 active:bg-white/20 active:scale-95 transition-all duration-150 group cursor-pointer touch-manipulation min-w-[120px] md:min-w-[130px] min-h-[48px] pointer-events-auto"
          >
-            <svg className="w-5 h-5 text-gray-400 group-hover:text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
             </svg>
-            <span className="text-xs md:text-[11px] font-semibold tracking-wider uppercase text-white pointer-events-none">Shuffle</span>
+            <span className="text-xs md:text-[11px] font-semibold tracking-wider uppercase text-white whitespace-nowrap">Shuffle</span>
          </button>
       </div>
 
