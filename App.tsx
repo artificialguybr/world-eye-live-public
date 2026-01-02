@@ -14,6 +14,7 @@ const App: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [showMinimap, setShowMinimap] = useState(false);
+  const [mapInstance, setMapInstance] = useState<any>(null);
 
   // Reset iframe state when camera changes
   useEffect(() => {
@@ -23,10 +24,27 @@ const App: React.FC = () => {
   }, [activeCamera?.id]);
 
   const handleCameraSelect = (camera: Camera) => {
-    setActiveCamera(camera);
-    setViewMode('immersive');
-    setIsSidebarOpen(false);
-    setShowMinimap(false);
+    // Fly to camera location before switching views
+    if (mapInstance && camera.coordinates) {
+      mapInstance.flyTo({
+        center: [camera.coordinates.lng, camera.coordinates.lat],
+        zoom: 8,
+        duration: 1200,
+        essential: true
+      });
+
+      setTimeout(() => {
+        setActiveCamera(camera);
+        setViewMode('immersive');
+        setIsSidebarOpen(false);
+        setShowMinimap(false);
+      }, 800);
+    } else {
+      setActiveCamera(camera);
+      setViewMode('immersive');
+      setIsSidebarOpen(false);
+      setShowMinimap(false);
+    }
   };
 
   const handleShuffle = () => {
@@ -53,8 +71,7 @@ const App: React.FC = () => {
           onSelectCamera={handleCameraSelect}
           onOpenList={() => setIsSidebarOpen(true)}
           onShuffle={handleShuffle}
-          onViewModeChange={setViewMode}
-          currentViewMode={viewMode}
+          onMapCreated={(map) => setMapInstance(map)}
         />
       </div>
 
