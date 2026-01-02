@@ -48,11 +48,13 @@ const App: React.FC = () => {
       <div 
         className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${viewMode === 'map' ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
-        <WorldMap 
-          cameras={CAMERAS} 
-          onSelectCamera={handleCameraSelect} 
+        <WorldMap
+          cameras={CAMERAS}
+          onSelectCamera={handleCameraSelect}
           onOpenList={() => setIsSidebarOpen(true)}
           onShuffle={handleShuffle}
+          onViewModeChange={setViewMode}
+          currentViewMode={viewMode}
         />
       </div>
 
