@@ -124,4 +124,18 @@
   .maplibregl-popup-tip {
     display: none !important;
   }
+
+  /* Improve button touch response on mobile */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Hardware acceleration for map */
+  .maplibregl-canvas {
+    will-change: transform;
+    transform: translateZ(0);
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import { Camera } from '../types';
 import tzLookup from 'tz-lookup';
 import { Map, MapMarker, MarkerContent, MarkerTooltip } from '@/components/ui/map';
@@ -13,11 +13,37 @@ interface WorldMapProps {
 
 const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList, onShuffle, onMapCreated }) => {
   const [now, setNow] = useState(() => new Date());
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => setNow(new Date()), 60000);
     return () => clearInterval(interval);
   }, []);
+
+  // Detect mobile device to optimize rendering
+  useEffect(() => {
+    const checkMobile = () => {
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                             window.innerWidth < 768;
+      setIsMobile(isMobileDevice);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handleOpenList = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onOpenList();
+  }, [onOpenList]);
+
+  const handleShuffle = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onShuffle();
+  }, [onShuffle]);
 
   const getLocalTime = (timeZone: string, date: Date) => {
     try {
@@ -33,7 +59,11 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
   };
 
   const camerasWithTz = useMemo(() => {
-    return cameras.map(cam => {
+    // Limit markers on mobile to improve performance
+    const maxMarkers = isMobile ? 100 : Math.min(cameras.length, 300);
+    const camerasToProcess = cameras.slice(0, maxMarkers);
+
+    return camerasToProcess.map(cam => {
       let timeZone = cam.timeZone;
       try {
         if (!timeZone) {
@@ -44,10 +74,10 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       }
       return { ...cam, timeZone };
     });
-  }, [cameras]);
+  }, [cameras, isMobile]);
 
   return (
-    <div className="w-full h-full relative bg-[#050505] flex flex-col items-center justify-end pb-24 overflow-hidden">
+    <div className="w-full h-full relative bg-[#050505] flex flex-col items-center justify-end pb-24 overflow-hidden will-change-transform">
       {/* Subtle Background */}
       <div className="absolute inset-0 z-0 opacity-25"
            style={{
@@ -68,6 +98,9 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       <div className="absolute top-6 right-8 z-20 flex items-center gap-2">
         <span className="text-xs tracking-[0.2em] uppercase text-white/50 font-mono">{cameras.length.toLocaleString('pt-BR')}</span>
         <span className="text-[10px] tracking-[0.3em] uppercase text-red-500 font-semibold">LIVE now</span>
+        {isMobile && cameras.length > 100 && (
+          <span className="text-[9px] tracking-[0.2em] uppercase text-white/30 hidden sm:inline-block">Showing 100</span>
+        )}
       </div>
 
       {/* Map Container */}
@@ -86,6 +119,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
               light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'
             }}
             onCreated={onMapCreated}
+            antialias={false}
           >
             {camerasWithTz.map((camera, index) => (
               <MapMarker
@@ -116,41 +150,25 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       </div>
 
       {/* Map Actions (List & Shuffle) */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[9999] flex gap-4">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[9999] flex gap-3 px-4">
          <button
-           onClick={(e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             onOpenList();
-           }}
-           onTouchEnd={(e) => {
-             e.preventDefault();
-             onOpenList();
-           }}
-           className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 transition-all group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation"
+           onClick={handleOpenList}
+           className="glass px-6 py-4 md:px-8 md:py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 active:scale-95 transition-all duration-150 group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation min-h-[52px] md:min-h-[48px]"
          >
             <svg className="w-5 h-5 text-gray-400 group-hover:text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <span className="text-xs font-semibold tracking-wider uppercase text-white pointer-events-none">Locations</span>
+            <span className="text-xs md:text-[11px] font-semibold tracking-wider uppercase text-white pointer-events-none">Locations</span>
          </button>
 
          <button
-           onClick={(e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             onShuffle();
-           }}
-           onTouchEnd={(e) => {
-             e.preventDefault();
-             onShuffle();
-           }}
-           className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 transition-all group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation"
+           onClick={handleShuffle}
+           className="glass px-6 py-4 md:px-8 md:py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 active:scale-95 transition-all duration-150 group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation min-h-[52px] md:min-h-[48px]"
          >
             <svg className="w-5 h-5 text-gray-400 group-hover:text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
             </svg>
-            <span className="text-xs font-semibold tracking-wider uppercase text-white pointer-events-none">Shuffle</span>
+            <span className="text-xs md:text-[11px] font-semibold tracking-wider uppercase text-white pointer-events-none">Shuffle</span>
          </button>
       </div>
 
