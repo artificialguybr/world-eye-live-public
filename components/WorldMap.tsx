@@ -132,7 +132,10 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
                   <div className="relative w-3.5 h-3.5 rounded-full border-2 border-[#8ab4ff] bg-[#8ab4ff] shadow-lg cursor-pointer hover:scale-125 transition-transform" />
                 </MarkerContent>
                 <MarkerTooltip offset={[-0, -8]}>
-                  <div className="glass-heavy px-3 py-2 rounded border border-white/10 text-center min-w-[160px] backdrop-blur-xl bg-black/80">
+                  <div
+                    className="glass-heavy px-3 py-2 rounded border border-white/10 min-w-[160px] backdrop-blur-xl bg-black/80 cursor-pointer hover:border-white/20 transition-all active:scale-95"
+                    onClick={() => onSelectCamera(camera)}
+                  >
                     <p className="text-white text-[10px] font-bold tracking-wider uppercase mb-0.5">{camera.name}</p>
                     <div className="h-[1px] w-full bg-white/10 my-1"></div>
                     <div className="flex justify-between text-[9px] text-gray-400">
@@ -140,6 +143,11 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
                       <span className="text-green-400">LIVE</span>
                     </div>
                     <div className="mt-1 text-[9px] text-white/70 tabular-nums">Local {camera.timeZone ? getLocalTime(camera.timeZone, now) : '--:--'}</div>
+                    <button
+                      className="mt-2 w-full py-1.5 bg-white/10 hover:bg-white/20 text-white/90 text-[9px] font-semibold tracking-wider uppercase rounded transition-colors active:scale-95"
+                    >
+                      Watch
+                    </button>
                   </div>
                 </MarkerTooltip>
               </MapMarker>
