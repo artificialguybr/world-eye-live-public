@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useRef } from 'react';
 import { Camera } from '../types';
 import tzLookup from 'tz-lookup';
 import { Map, MapMarker, MarkerContent, MarkerTooltip } from '@/components/ui/map';
@@ -8,10 +8,15 @@ interface WorldMapProps {
   onSelectCamera: (camera: Camera) => void;
   onOpenList: () => void;
   onShuffle: () => void;
+  onViewModeChange?: (viewMode: 'map' | 'immersive') => void;
+  currentViewMode?: 'map' | 'immersive';
 }
 
-const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList, onShuffle }) => {
+const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList, onShuffle, onViewModeChange, currentViewMode = 'map' }) => {
   const [now, setNow] = useState(() => new Date());
+  const [map, setMap] = useState<any>(null);
+  const [zoomLevel, setZoomLevel] = useState(2);
+  const [isZoomedIn, setIsZoomedIn] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => setNow(new Date()), 60000);
@@ -31,6 +36,40 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
     }
   };
 
+  const handleCameraClick = (camera: Camera, mapInstance: any) => {
+    if (mapInstance && camera.coordinates) {
+      setIsZoomedIn(true);
+      mapInstance.flyTo({
+        center: [camera.coordinates.lng, camera.coordinates.lat],
+        zoom: 8,
+        duration: 1200,
+        essential: true
+      });
+
+      setTimeout(() => {
+        onSelectCamera(camera);
+        onViewModeChange?.('immersive');
+      }, 800);
+    } else {
+      onSelectCamera(camera);
+      onViewModeChange?.('immersive');
+    }
+  };
+
+  // Reset zoom quando voltar para mapa
+  useEffect(() => {
+    if (currentViewMode === 'map' && map && isZoomedIn) {
+      map.flyTo({
+        center: [20, 0],
+        zoom: 2,
+        duration: 1500,
+        essential: true
+      });
+      setZoomLevel(2);
+      setIsZoomedIn(false);
+    }
+  }, [currentViewMode, map, isZoomedIn]);
+
   const camerasWithTz = useMemo(() => {
     return cameras.map(cam => {
       let timeZone = cam.timeZone;
@@ -46,34 +85,32 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
   }, [cameras]);
 
   return (
-    <div className="w-full h-full relative bg-[#050505] flex flex-col items-center justify-start pt-16 pb-24 overflow-hidden">
+    <div className="w-full h-full relative bg-[#050505] flex flex-col items-center justify-start pt-12 md:pt-16 pb-24 overflow-hidden">
       {/* Subtle Background */}
       <div className="absolute inset-0 z-0 opacity-25" 
            style={{ 
              backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', 
              backgroundSize: '80px 80px' 
-           }}>
-      </div>
+           }} 
+      />
       <div className="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.06),transparent_70%)]"></div>
 
-      {/* Brand */}
-      <div className="absolute top-6 left-8 z-20 flex items-center gap-3">
-        <div className="w-2 h-2 rounded-full bg-white/70"></div>
-        <div className="text-xs tracking-[0.4em] uppercase text-white/70">GlobalEyes</div>
-        <div className="text-[10px] tracking-[0.3em] uppercase text-white/40">Live</div>
-      </div>
+      
 
       {/* Map Container */}
-      <div className="relative w-[94vw] max-w-[1900px] h-[66vh] mt-6">
+      <div className="relative w-[94vw] max-w-[1900px] h-[70vh] md:h-[80vh] mt-4 md:mt-6">
         <div className="absolute inset-0 rounded-[28px] border border-white/10 shadow-[0_40px_120px_rgba(0,0,0,0.7)]"></div>
         <div className="absolute inset-0 rounded-[28px] bg-gradient-to-b from-white/5 via-transparent to-black/30 pointer-events-none"></div>
-        <div className="absolute inset-0 rounded-[28px] bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 rounded-[28px bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none"></div>
         <div className="w-full h-full rounded-[28px] overflow-hidden">
           <Map
             center={[20, 0]}
-            zoom={2}
+            zoom={zoomLevel}
             minZoom={1}
-            maxZoom={8}
+            maxZoom={15}
+            style={{ width: '100%', height: '100%' }}
+            onCreated={setMap}
+            onZoomEnd={(e) => setZoomLevel(e.viewState.zoom)}
             styles={{
               dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
               light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'
@@ -84,7 +121,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
                 key={`${camera.id}-${index}`}
                 longitude={camera.coordinates.lng}
                 latitude={camera.coordinates.lat}
-                onClick={() => onSelectCamera(camera)}
+                onClick={() => handleCameraClick(camera, map)}
               >
                 <MarkerContent>
                   <div className="relative w-3.5 h-3.5 rounded-full border-2 border-[#8ab4ff] bg-[#8ab4ff] shadow-lg cursor-pointer hover:scale-125 transition-transform" />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import WorldMap from './components/WorldMap';
 import LivePlayer from './components/LivePlayer';
+import Minimap from './components/Minimap';
 import { CAMERAS } from './constants';
 import { Camera } from './types';
 
@@ -12,17 +13,20 @@ const App: React.FC = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('map');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [showMinimap, setShowMinimap] = useState(false);
 
   // Reset iframe state when camera changes
   useEffect(() => {
     if (!activeCamera) return;
     setIframeLoaded(false);
+    setShowMinimap(false);
   }, [activeCamera?.id]);
 
   const handleCameraSelect = (camera: Camera) => {
     setActiveCamera(camera);
     setViewMode('immersive');
     setIsSidebarOpen(false);
+    setShowMinimap(false);
   };
 
   const handleShuffle = () => {
@@ -99,7 +103,7 @@ const App: React.FC = () => {
 
         {/* Bottom Information & Controls */}
         <div className="absolute bottom-0 left-0 right-0 p-8 pb-10 z-50 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none">
-          
+
           {/* Left: Location Info */}
           <div className="max-w-md pointer-events-auto transition-transform duration-500 hover:scale-[1.02]">
             <div className="space-y-1">
@@ -122,11 +126,18 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Center: The Dock (Only visible in Immersive Mode) */}
+          {/* Center: The Dock & Minimap (Only visible in Immersive Mode) */}
           <div className="absolute left-1/2 bottom-10 -translate-x-1/2 pointer-events-auto">
+            {/* Minimap Popup */}
+            {showMinimap && activeCamera && (
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 transition-all duration-300">
+                <Minimap camera={activeCamera} onClose={() => setShowMinimap(false)} />
+              </div>
+            )}
+
             <div className="glass-panel px-2 py-2 rounded-2xl flex items-center gap-1 scale-90 md:scale-100 transition-all duration-300 hover:scale-105 hover:bg-black/60">
-              
-              <button 
+
+              <button
                 onClick={() => setIsSidebarOpen(true)}
                 className="p-4 rounded-xl hover:bg-white/10 text-white/80 hover:text-white transition-all group flex flex-col items-center gap-1 w-20"
               >
@@ -135,10 +146,10 @@ const App: React.FC = () => {
                 </svg>
                 <span className="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-1">List</span>
               </button>
-              
+
               <div className="w-[1px] h-8 bg-white/10 mx-1"></div>
 
-              <button 
+              <button
                 onClick={handleShuffle}
                 className="p-4 rounded-xl hover:bg-white/10 text-white/80 hover:text-white transition-all group flex flex-col items-center gap-1 w-20"
               >
@@ -146,6 +157,18 @@ const App: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
                 <span className="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-1">Shuffle</span>
+              </button>
+
+              <div className="w-[1px] h-8 bg-white/10 mx-1"></div>
+
+              <button
+                onClick={() => setShowMinimap(!showMinimap)}
+                className={`p-4 rounded-xl transition-all group flex flex-col items-center gap-1 w-20 ${showMinimap ? 'bg-white/10 text-white' : 'hover:bg-white/10 text-white/80 hover:text-white'}`}
+              >
+                <svg className="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                <span className="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-1">Map</span>
               </button>
 
             </div>
