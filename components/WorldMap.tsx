@@ -60,7 +60,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       {/* Brand */}
       <div className="absolute top-6 left-8 z-20 flex items-center gap-3">
         <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-        <div className="text-xs tracking-[0.4em] uppercase text-white/70">GlobalEyes</div>
+        <div className="text-xs tracking-[0.4em] uppercase text-white/70">WorldEyeMap</div>
         <div className="text-[10px] tracking-[0.3em] uppercase text-red-500 font-semibold animate-pulse">Live</div>
       </div>
 
@@ -80,7 +80,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
             center={[20, 0]}
             zoom={2}
             minZoom={1}
-            maxZoom={8}
+            maxZoom={15}
             styles={{
               dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
               light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'
@@ -116,25 +116,41 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       </div>
 
       {/* Map Actions (List & Shuffle) */}
-      <div className="absolute bottom-6 z-[9999] flex gap-4" onClick={(e) => e.stopPropagation()}>
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[9999] flex gap-4">
          <button
-           onClick={onOpenList}
-           className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 transition-all group cursor-pointer"
+           onClick={(e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             onOpenList();
+           }}
+           onTouchEnd={(e) => {
+             e.preventDefault();
+             onOpenList();
+           }}
+           className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 transition-all group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation"
          >
-            <svg className="w-5 h-5 text-gray-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-gray-400 group-hover:text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <span className="text-xs font-semibold tracking-wider uppercase text-white">Locations</span>
+            <span className="text-xs font-semibold tracking-wider uppercase text-white pointer-events-none">Locations</span>
          </button>
 
          <button
-           onClick={onShuffle}
-           className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 transition-all group cursor-pointer"
+           onClick={(e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             onShuffle();
+           }}
+           onTouchEnd={(e) => {
+             e.preventDefault();
+             onShuffle();
+           }}
+           className="glass px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/10 active:bg-white/20 transition-all group cursor-pointer pointer-events-auto relative z-[10000] touch-manipulation"
          >
-            <svg className="w-5 h-5 text-gray-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-gray-400 group-hover:text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
             </svg>
-            <span className="text-xs font-semibold tracking-wider uppercase text-white">Shuffle</span>
+            <span className="text-xs font-semibold tracking-wider uppercase text-white pointer-events-none">Shuffle</span>
          </button>
       </div>
 

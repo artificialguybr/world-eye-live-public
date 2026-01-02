@@ -24,21 +24,29 @@ const App: React.FC = () => {
   }, [activeCamera?.id]);
 
   const handleCameraSelect = (camera: Camera) => {
-    // Fly to camera location before switching views
+    // Cinematic fly-to zoom into camera location before switching views
     if (mapInstance && camera.coordinates) {
+      const currentZoom = mapInstance.getZoom();
+      const targetZoom = 12;
+
       mapInstance.flyTo({
         center: [camera.coordinates.lng, camera.coordinates.lat],
-        zoom: 8,
-        duration: 1200,
-        essential: true
+        zoom: targetZoom,
+        pitch: 45,
+        bearing: 0,
+        duration: 2000,
+        essential: true,
+        curve: 1.42
       });
+
+      const duration = Math.max(2000, (targetZoom - currentZoom) * 300);
 
       setTimeout(() => {
         setActiveCamera(camera);
         setViewMode('immersive');
         setIsSidebarOpen(false);
         setShowMinimap(false);
-      }, 800);
+      }, duration - 500);
     } else {
       setActiveCamera(camera);
       setViewMode('immersive');
@@ -121,10 +129,10 @@ const App: React.FC = () => {
         </div>
 
         {/* Bottom Information & Controls */}
-        <div className="absolute bottom-0 left-0 right-0 p-8 pb-10 z-50 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none">
+        <div className="absolute bottom-0 left-0 right-0 p-6 pb-10 md:p-8 md:pb-10 z-50 flex flex-col items-center md:flex-row justify-between items-end gap-6 pointer-events-none">
 
           {/* Left: Location Info */}
-          <div className="max-w-md pointer-events-auto transition-transform duration-500 hover:scale-[1.02]">
+          <div className="max-w-md pointer-events-auto transition-transform duration-500 hover:scale-[1.02] mb-20 md:mb-0">
             <div className="space-y-1">
               <div className="flex items-center gap-2 text-white/60 text-xs font-medium tracking-wider uppercase mb-2">
                 <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
@@ -133,20 +141,15 @@ const App: React.FC = () => {
                 {activeCamera?.location ?? ''}
               </div>
               {activeCamera && (
-                <>
-                  <h1 className="text-4xl md:text-5xl font-light tracking-tight text-white leading-tight drop-shadow-lg">
-                    {activeCamera.name}
-                  </h1>
-                  <p className="text-white/70 text-sm font-light leading-relaxed mt-2 max-w-sm border-l-2 border-white/20 pl-3">
-                    {activeCamera.description}
-                  </p>
-                </>
+                <h1 className="text-4xl md:text-5xl font-light tracking-tight text-white leading-tight drop-shadow-lg">
+                  {activeCamera.name}
+                </h1>
               )}
             </div>
           </div>
 
           {/* Center: The Dock & Minimap (Only visible in Immersive Mode) */}
-          <div className="absolute left-1/2 bottom-10 -translate-x-1/2 pointer-events-auto">
+          <div className="absolute left-1/2 bottom-6 md:bottom-10 -translate-x-1/2 pointer-events-auto">
             {/* Minimap Popup */}
             {showMinimap && activeCamera && (
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 transition-all duration-300">
