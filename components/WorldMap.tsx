@@ -95,7 +95,12 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       />
       <div className="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.06),transparent_70%)]"></div>
 
-      
+      {/* Brand */}
+      <div className="absolute top-6 left-8 z-20 flex items-center gap-3">
+        <div className="w-2 h-2 rounded-full bg-white/70"></div>
+        <div className="text-xs tracking-[0.4em] uppercase text-white/70">WorldEyeMap</div>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-white/40">Live</div>
+      </div>
 
       {/* Map Container */}
       <div className="relative w-[94vw] max-w-[1900px] h-[70vh] md:h-[80vh] mt-4 md:mt-6">
@@ -111,10 +116,6 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
             style={{ width: '100%', height: '100%' }}
             onCreated={setMap}
             onZoomEnd={(e) => setZoomLevel(e.viewState.zoom)}
-            styles={{
-              dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
-              light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'
-            }}
           >
             {camerasWithTz.map((camera, index) => (
               <MapMarker

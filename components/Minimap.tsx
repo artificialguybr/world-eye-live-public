@@ -46,10 +46,6 @@ const Minimap: React.FC<MinimapProps> = ({ camera, onClose }) => {
           style={{ width: '100%', height: '100%' }}
           onCreated={setMap}
           onClick={() => setIsLoaded(true)}
-          styles={{
-            dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
-            light: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
-          }}
         >
           <MapMarker
             longitude={camera.coordinates.lng}
