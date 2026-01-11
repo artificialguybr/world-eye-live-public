@@ -46,6 +46,13 @@ export interface WindyWebcam {
       live?: string;
     } | null;
   };
+  player?: {
+    day?: string;
+    live?: string;
+    month?: string;
+    year?: string;
+    lifetime?: string;
+  };
   categories?: string[];
 }
 
@@ -198,6 +205,11 @@ function windyWebcamToCamera(windy: WindyWebcam): Camera {
       windy.url?.player?.day ||
       windy.urls?.player?.live ||
       windy.urls?.player?.day ||
+      windy.player?.live ||
+      windy.player?.day ||
+      windy.player?.month ||
+      windy.player?.year ||
+      windy.player?.lifetime ||
       undefined,
     thumbnail: windy.image?.current?.thumbnail || windy.images?.current?.thumbnail,
     category,

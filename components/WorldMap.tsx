@@ -63,9 +63,32 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
       Number.isFinite(cam.coordinates?.lat) && Number.isFinite(cam.coordinates?.lng)
     );
 
-    // Limit markers on mobile to improve performance
     const maxMarkers = isMobile ? 100 : Math.min(camerasWithCoords.length, 300);
-    const camerasToProcess = camerasWithCoords.slice(0, maxMarkers);
+    const windy = camerasWithCoords.filter(cam => cam.source === 'windy');
+    const others = camerasWithCoords.filter(cam => cam.source !== 'windy');
+
+    const sampleEvenly = (list: Camera[], count: number) => {
+      if (count <= 0) return [];
+      if (count >= list.length) return list;
+      const step = list.length / count;
+      const sampled: Camera[] = [];
+      for (let i = 0; i < count; i++) {
+        sampled.push(list[Math.floor(i * step)]);
+      }
+      return sampled;
+    };
+
+    let camerasToProcess: Camera[];
+    if (camerasWithCoords.length <= maxMarkers) {
+      camerasToProcess = camerasWithCoords;
+    } else {
+      const targetWindy = Math.min(windy.length, Math.ceil(maxMarkers * 0.5));
+      const targetOthers = maxMarkers - targetWindy;
+      camerasToProcess = [
+        ...sampleEvenly(windy, targetWindy),
+        ...sampleEvenly(others, targetOthers),
+      ];
+    }
 
     return camerasToProcess.map(cam => {
       let timeZone = cam.timeZone;

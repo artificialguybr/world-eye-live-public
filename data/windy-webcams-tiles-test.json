@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "windy-1619075844",
+    "name": "La Lande-Patry: Flers - Saint-Paul Airport",
+    "location": "La Lande-Patry, France",
+    "description": "Live webcam from La Lande-Patry, France",
+    "source": "windy",
+    "windyId": "1619075844",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.75045,
+      "lng": -0.58868
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.992Z"
+  },
+  {
+    "id": "windy-1793871686",
+    "name": "East Cambridgeshire",
+    "location": "East Cambridgeshire, United Kingdom",
+    "description": "Live webcam from East Cambridgeshire, United Kingdom",
+    "source": "windy",
+    "windyId": "1793871686",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.27215,
+      "lng": 0.44913
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.993Z"
+  },
+  {
+    "id": "windy-1672074457",
+    "name": "Rouen",
+    "location": "Rouen, France",
+    "description": "Live webcam from Rouen, France",
+    "source": "windy",
+    "windyId": "1672074457",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.43514,
+      "lng": 1.09405
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.993Z"
+  },
+  {
+    "id": "windy-1793868447",
+    "name": "Ashford",
+    "location": "Ashford, United Kingdom",
+    "description": "Live webcam from Ashford, United Kingdom",
+    "source": "windy",
+    "windyId": "1793868447",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.17608,
+      "lng": 0.84415
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.993Z"
+  },
+  {
+    "id": "windy-1363012115",
+    "name": "Senningen: A1 Senningerberg Fliigerbreck",
+    "location": "Senningen, Luxembourg",
+    "description": "Live webcam from Senningen, Luxembourg",
+    "source": "windy",
+    "windyId": "1363012115",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.63704,
+      "lng": 6.24006
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1618144876",
+    "name": "Emerainville › South-east: Aerodrome de Lognes",
+    "location": "Emerainville, France",
+    "description": "Live webcam from Emerainville, France",
+    "source": "windy",
+    "windyId": "1618144876",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.82022,
+      "lng": 2.62496
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1356280101",
+    "name": "Lohndorf: Kirche Sinzig",
+    "location": "Lohndorf, Germany",
+    "description": "Live webcam from Lohndorf, Germany",
+    "source": "windy",
+    "windyId": "1356280101",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.52883,
+      "lng": 7.20334
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1700497511",
+    "name": "Ameland › North",
+    "location": "Ameland, Netherlands",
+    "description": "Live webcam from Ameland, Netherlands",
+    "source": "windy",
+    "windyId": "1700497511",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.46026,
+      "lng": 5.77864
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1656767575",
+    "name": "Malden › North",
+    "location": "Malden, Netherlands",
+    "description": "Live webcam from Malden, Netherlands",
+    "source": "windy",
+    "windyId": "1656767575",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.77619,
+      "lng": 5.86447
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1617377416",
+    "name": "Blankenberge: O'Neill Beach Club - Strand Blankenberge pier",
+    "location": "Blankenberge, Belgium",
+    "description": "Live webcam from Blankenberge, Belgium",
+    "source": "windy",
+    "windyId": "1617377416",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.32008,
+      "lng": 3.14082
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1581168847",
+    "name": "Hestrud › North-east",
+    "location": "Hestrud, France",
+    "description": "Live webcam from Hestrud, France",
+    "source": "windy",
+    "windyId": "1581168847",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.19614,
+      "lng": 4.14458
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1407680145",
+    "name": "Wyk auf Fohr: Wyker-Flugplatzbetriebs GmbH",
+    "location": "Wyk auf Fohr, Germany",
+    "description": "Live webcam from Wyk auf Fohr, Germany",
+    "source": "windy",
+    "windyId": "1407680145",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.68317,
+      "lng": 8.53306
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1653845418",
+    "name": "Gersfeld › South-west",
+    "location": "Gersfeld, Germany",
+    "description": "Live webcam from Gersfeld, Germany",
+    "source": "windy",
+    "windyId": "1653845418",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.49754,
+      "lng": 9.93521
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1469794097",
+    "name": "Walldorf › East: Flugplatz Walldorf",
+    "location": "Walldorf, Germany",
+    "description": "Live webcam from Walldorf, Germany",
+    "source": "windy",
+    "windyId": "1469794097",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.30701,
+      "lng": 8.6561
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1597010894",
+    "name": "Sehnde › South",
+    "location": "Sehnde, Germany",
+    "description": "Live webcam from Sehnde, Germany",
+    "source": "windy",
+    "windyId": "1597010894",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.30158,
+      "lng": 9.96
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1378070378",
+    "name": "Willingen: Schwalefeld - Café Fernblick",
+    "location": "Willingen, Germany",
+    "description": "Live webcam from Willingen, Germany",
+    "source": "windy",
+    "windyId": "1378070378",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.31042,
+      "lng": 8.61636
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1223409171",
+    "name": "Bremen: Schlachte",
+    "location": "Bremen, Germany",
+    "description": "Live webcam from Bremen, Germany",
+    "source": "windy",
+    "windyId": "1223409171",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.0744,
+      "lng": 8.8044
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1591247105",
+    "name": "Varde Municipality: Henne Golfklub",
+    "location": "unknown, Denmark",
+    "description": "Live webcam from unknown, Denmark",
+    "source": "windy",
+    "windyId": "1591247105",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.73614,
+      "lng": 8.22736
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1675291724",
+    "name": "Fattnes: Ilstad",
+    "location": "Fattnes, Norway",
+    "description": "Live webcam from Fattnes, Norway",
+    "source": "windy",
+    "windyId": "1675291724",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.56114,
+      "lng": 6.26909
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1675207396",
+    "name": "Veum",
+    "location": "Veum, Norway",
+    "description": "Live webcam from Veum, Norway",
+    "source": "windy",
+    "windyId": "1675207396",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.28423,
+      "lng": 8.08935
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1327347700",
+    "name": "Tonstad: Bjørnestad Skisenter, Sirdal",
+    "location": "Tonstad, Norway",
+    "description": "Live webcam from Tonstad, Norway",
+    "source": "windy",
+    "windyId": "1327347700",
+    "category": "Live",
+    "coordinates": {
+      "lat": 58.66202,
+      "lng": 6.59351
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1694273212",
+    "name": "Fevik › South-east",
+    "location": "Fevik, Norway",
+    "description": "Live webcam from Fevik, Norway",
+    "source": "windy",
+    "windyId": "1694273212",
+    "category": "Live",
+    "coordinates": {
+      "lat": 58.38201,
+      "lng": 8.66916
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1405782420",
+    "name": "Hvittingfoss › North: Kongsberg",
+    "location": "Hvittingfoss, Norway",
+    "description": "Live webcam from Hvittingfoss, Norway",
+    "source": "windy",
+    "windyId": "1405782420",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.54323,
+      "lng": 9.95795
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1603616640",
+    "name": "Penzance: Newlyn Harbour - Mount's Bay",
+    "location": "Penzance, United Kingdom",
+    "description": "Live webcam from Penzance, United Kingdom",
+    "source": "windy",
+    "windyId": "1603616640",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.10321,
+      "lng": -5.55271
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1793869256",
+    "name": "East Hampshire",
+    "location": "East Hampshire, United Kingdom",
+    "description": "Live webcam from East Hampshire, United Kingdom",
+    "source": "windy",
+    "windyId": "1793869256",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.9208,
+      "lng": -0.9979
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1793868382",
+    "name": "Sedgemoor",
+    "location": "Sedgemoor, United Kingdom",
+    "description": "Live webcam from Sedgemoor, United Kingdom",
+    "source": "windy",
+    "windyId": "1793868382",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.2627,
+      "lng": -2.9222
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1715979475",
+    "name": "Western Isles: Berneray Harbour",
+    "location": "unknown, United Kingdom",
+    "description": "Live webcam from unknown, United Kingdom",
+    "source": "windy",
+    "windyId": "1715979475",
+    "category": "Live",
+    "coordinates": {
+      "lat": 57.71525,
+      "lng": -7.17054
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1683365726",
+    "name": "Ballyjamesduff Municipal District",
+    "location": "Ballyjamesduff Municipal District, Ireland",
+    "description": "Live webcam from Ballyjamesduff Municipal District, Ireland",
+    "source": "windy",
+    "windyId": "1683365726",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.86391,
+      "lng": -7.20616
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1704993078",
+    "name": "Kenmare Municipal District › North-east: Misty Bay",
+    "location": "Kenmare Municipal District, Ireland",
+    "description": "Live webcam from Kenmare Municipal District, Ireland",
+    "source": "windy",
+    "windyId": "1704993078",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.85858,
+      "lng": -9.59875
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1346463609",
+    "name": "Waterford City Metropolitan District: Tramore",
+    "location": "Waterford City Metropolitan District, Ireland",
+    "description": "Live webcam from Waterford City Metropolitan District, Ireland",
+    "source": "windy",
+    "windyId": "1346463609",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.15823,
+      "lng": -7.14947
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1586612871",
+    "name": "Conamara Municipal District: Inishmore › South-east: Aran Islands Hotel",
+    "location": "Conamara Municipal District, Ireland",
+    "description": "Live webcam from Conamara Municipal District, Ireland",
+    "source": "windy",
+    "windyId": "1586612871",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.11793,
+      "lng": -9.67571
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1685711959",
+    "name": "Argyllshire › East",
+    "location": "unknown, United Kingdom",
+    "description": "Live webcam from unknown, United Kingdom",
+    "source": "windy",
+    "windyId": "1685711959",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.06862,
+      "lng": -6.18682
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1341952815",
+    "name": "Invernessshire: Live Glencoe Ski Centre slope weather snow camera",
+    "location": "unknown, United Kingdom",
+    "description": "Live webcam from unknown, United Kingdom",
+    "source": "windy",
+    "windyId": "1341952815",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.63218,
+      "lng": -4.82824
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1604926554",
+    "name": "Wirral › North",
+    "location": "Wirral, United Kingdom",
+    "description": "Live webcam from Wirral, United Kingdom",
+    "source": "windy",
+    "windyId": "1604926554",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.42392,
+      "lng": -3.02751
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1213353550",
+    "name": "Braddan: Douglas Harbour, Queen Victoria Pier",
+    "location": "Braddan, Isle of Man",
+    "description": "Live webcam from Braddan, Isle of Man",
+    "source": "windy",
+    "windyId": "1213353550",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.14663,
+      "lng": -4.47161
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1762928323",
+    "name": "Rotherham",
+    "location": "Rotherham, United Kingdom",
+    "description": "Live webcam from Rotherham, United Kingdom",
+    "source": "windy",
+    "windyId": "1762928323",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.3837,
+      "lng": -1.2783
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1643304266",
+    "name": "Scarborough: Whitby Harbour",
+    "location": "Scarborough, United Kingdom",
+    "description": "Live webcam from Scarborough, United Kingdom",
+    "source": "windy",
+    "windyId": "1643304266",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.48741,
+      "lng": -0.61551
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1672574717",
+    "name": "Peterhead › North",
+    "location": "Peterhead, United Kingdom",
+    "description": "Live webcam from Peterhead, United Kingdom",
+    "source": "windy",
+    "windyId": "1672574717",
+    "category": "Live",
+    "coordinates": {
+      "lat": 57.5,
+      "lng": -1.8
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1623097692",
+    "name": "Inverness › East",
+    "location": "Inverness, United Kingdom",
+    "description": "Live webcam from Inverness, United Kingdom",
+    "source": "windy",
+    "windyId": "1623097692",
+    "category": "Live",
+    "coordinates": {
+      "lat": 57.5488,
+      "lng": -4.26215
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1581432671",
+    "name": "Troon › North-west: Troon Yacht Haven",
+    "location": "Troon, United Kingdom",
+    "description": "Live webcam from Troon, United Kingdom",
+    "source": "windy",
+    "windyId": "1581432671",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.54473,
+      "lng": -4.6774
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1532366601",
+    "name": "Greenhaugh › North-west: Tarset",
+    "location": "Greenhaugh, United Kingdom",
+    "description": "Live webcam from Greenhaugh, United Kingdom",
+    "source": "windy",
+    "windyId": "1532366601",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.1946,
+      "lng": -2.33496
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1594296101",
+    "name": "Strathy › North-west",
+    "location": "Strathy, United Kingdom",
+    "description": "Live webcam from Strathy, United Kingdom",
+    "source": "windy",
+    "windyId": "1594296101",
+    "category": "Live",
+    "coordinates": {
+      "lat": 58.55567,
+      "lng": -3.94997
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1793868970",
+    "name": "Solihull",
+    "location": "Solihull, United Kingdom",
+    "description": "Live webcam from Solihull, United Kingdom",
+    "source": "windy",
+    "windyId": "1793868970",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.3943,
+      "lng": -1.7672
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1793869135",
+    "name": "Saundersfoot",
+    "location": "Saundersfoot, United Kingdom",
+    "description": "Live webcam from Saundersfoot, United Kingdom",
+    "source": "windy",
+    "windyId": "1793869135",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.7293,
+      "lng": -4.72169
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:47.994Z"
+  },
+  {
+    "id": "windy-1662035053",
+    "name": "Terespol › West: Pto Varshavskiy Most - Brest",
+    "location": "Terespol, Poland",
+    "description": "Live webcam from Terespol, Poland",
+    "source": "windy",
+    "windyId": "1662035053",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.07265,
+      "lng": 23.65491
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1739778089",
+    "name": "Vilnius: Geležinio Vilko gatvė",
+    "location": "Vilnius, Lithuania",
+    "description": "Live webcam from Vilnius, Lithuania",
+    "source": "windy",
+    "windyId": "1739778089",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.67648,
+      "lng": 25.24614
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1671798277",
+    "name": "Lahojsk selsaviet › North-west",
+    "location": "Lahojsk selsaviet, Belarus",
+    "description": "Live webcam from Lahojsk selsaviet, Belarus",
+    "source": "windy",
+    "windyId": "1671798277",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.1569,
+      "lng": 27.83667
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793884475",
+    "name": "Pinsk",
+    "location": "Pinsk, Belarus",
+    "description": "Live webcam from Pinsk, Belarus",
+    "source": "windy",
+    "windyId": "1793884475",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.1115,
+      "lng": 26.1006
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1698729616",
+    "name": "городское поселение Невель",
+    "location": "городское поселение Невель, Russia",
+    "description": "Live webcam from городское поселение Невель, Russia",
+    "source": "windy",
+    "windyId": "1698729616",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.01625,
+      "lng": 29.92338
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793873710",
+    "name": "Baldones pagasts: Riekstukalns",
+    "location": "Baldones pagasts, Latvia",
+    "description": "Live webcam from Baldones pagasts, Latvia",
+    "source": "windy",
+    "windyId": "1793873710",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.77508,
+      "lng": 24.40166
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793886286",
+    "name": "Pasuliene › North: Bebrenes web kamera",
+    "location": "unknown, Latvia",
+    "description": "Live webcam from unknown, Latvia",
+    "source": "windy",
+    "windyId": "1793886286",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.06636,
+      "lng": 26.13062
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1744011569",
+    "name": "Кингисеппское городское поселение",
+    "location": "Кингисеппское городское поселение, Russia",
+    "description": "Live webcam from Кингисеппское городское поселение, Russia",
+    "source": "windy",
+    "windyId": "1744011569",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.37503,
+      "lng": 28.59653
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1596907850",
+    "name": "Suurkula › South-west",
+    "location": "unknown, Estonia",
+    "description": "Live webcam from unknown, Estonia",
+    "source": "windy",
+    "windyId": "1596907850",
+    "category": "Live",
+    "coordinates": {
+      "lat": 57.93767,
+      "lng": 26.97701
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1433862246",
+    "name": "Kadrina alevik: Kadrina - Lääne-Virumaa, Estonia",
+    "location": "unknown, Estonia",
+    "description": "Live webcam from unknown, Estonia",
+    "source": "windy",
+    "windyId": "1433862246",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.34509,
+      "lng": 26.12514
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793869097",
+    "name": "Svetlogorsk › East",
+    "location": "Svetlogorsk, Russia",
+    "description": "Live webcam from Svetlogorsk, Russia",
+    "source": "windy",
+    "windyId": "1793869097",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.94575,
+      "lng": 20.1472
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1500550481",
+    "name": "Gartow › North-east: Gartower See",
+    "location": "Gartow, Germany",
+    "description": "Live webcam from Gartow, Germany",
+    "source": "windy",
+    "windyId": "1500550481",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.027,
+      "lng": 11.4632
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1642775684",
+    "name": "Haibach › West",
+    "location": "Haibach, Germany",
+    "description": "Live webcam from Haibach, Germany",
+    "source": "windy",
+    "windyId": "1642775684",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.03631,
+      "lng": 12.74724
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1468334400",
+    "name": "Zwickau › South: Saxony, Germany",
+    "location": "Zwickau, Germany",
+    "description": "Live webcam from Zwickau, Germany",
+    "source": "windy",
+    "windyId": "1468334400",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.70508,
+      "lng": 12.45486
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1627819205",
+    "name": "Demmin › South-east",
+    "location": "Demmin, Germany",
+    "description": "Live webcam from Demmin, Germany",
+    "source": "windy",
+    "windyId": "1627819205",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.9,
+      "lng": 13.1
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1643632254",
+    "name": "Muncheberg › South-east: Eggersdorf Airport",
+    "location": "Muncheberg, Germany",
+    "description": "Live webcam from Muncheberg, Germany",
+    "source": "windy",
+    "windyId": "1643632254",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.48353,
+      "lng": 14.09015
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1761522583",
+    "name": "Bolkow: Bolków Castle",
+    "location": "Bolkow, Poland",
+    "description": "Live webcam from Bolkow, Poland",
+    "source": "windy",
+    "windyId": "1761522583",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.92194,
+      "lng": 16.10111
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1640676733",
+    "name": "Stalowa Wola",
+    "location": "Stalowa Wola, Poland",
+    "description": "Live webcam from Stalowa Wola, Poland",
+    "source": "windy",
+    "windyId": "1640676733",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.57699,
+      "lng": 22.06141
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793876402",
+    "name": "Warsaw",
+    "location": "Warsaw, Poland",
+    "description": "Live webcam from Warsaw, Poland",
+    "source": "windy",
+    "windyId": "1793876402",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.19056,
+      "lng": 21.08944
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1605003364",
+    "name": "District of Sabinov › South-west",
+    "location": "District of Sabinov, Slovakia",
+    "description": "Live webcam from District of Sabinov, Slovakia",
+    "source": "windy",
+    "windyId": "1605003364",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.16364,
+      "lng": 21.14256
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1720536673",
+    "name": "Mezno: D3, 63,5 km, České Budějovice Direction",
+    "location": "Mezno, Czechia",
+    "description": "Live webcam from Mezno, Czechia",
+    "source": "windy",
+    "windyId": "1720536673",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.53329,
+      "lng": 14.66423
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1617961480",
+    "name": "Lodz: Centrum: Piotrkowska - Nawrot",
+    "location": "Lodz, Poland",
+    "description": "Live webcam from Lodz, Poland",
+    "source": "windy",
+    "windyId": "1617961480",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.76235,
+      "lng": 19.45791
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793891258",
+    "name": "Gdansk",
+    "location": "Gdansk, Poland",
+    "description": "Live webcam from Gdansk, Poland",
+    "source": "windy",
+    "windyId": "1793891258",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.349,
+      "lng": 18.65172
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793871703",
+    "name": "Bialogard: Droga Wojewódzka 163",
+    "location": "Bialogard, Poland",
+    "description": "Live webcam from Bialogard, Poland",
+    "source": "windy",
+    "windyId": "1793871703",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.00756,
+      "lng": 15.97498
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793886289",
+    "name": "Gniezno: Rynek na żywo w Gnieźnie",
+    "location": "Gniezno, Poland",
+    "description": "Live webcam from Gniezno, Poland",
+    "source": "windy",
+    "windyId": "1793886289",
+    "category": "Live",
+    "coordinates": {
+      "lat": 52.53588,
+      "lng": 17.59531
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1603778940",
+    "name": "Plawniowice",
+    "location": "Plawniowice, Poland",
+    "description": "Live webcam from Plawniowice, Poland",
+    "source": "windy",
+    "windyId": "1603778940",
+    "category": "Live",
+    "coordinates": {
+      "lat": 50.3861,
+      "lng": 18.49566
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1196610064",
+    "name": "Wilthen: Sachsen) Blick Richtung Picho",
+    "location": "Wilthen, Germany",
+    "description": "Live webcam from Wilthen, Germany",
+    "source": "windy",
+    "windyId": "1196610064",
+    "category": "Live",
+    "coordinates": {
+      "lat": 51.09658,
+      "lng": 14.39127
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1358073076",
+    "name": "Zborov: Lyžařský areál",
+    "location": "Zborov, Czechia",
+    "description": "Live webcam from Zborov, Czechia",
+    "source": "windy",
+    "windyId": "1358073076",
+    "category": "Live",
+    "coordinates": {
+      "lat": 49.94366,
+      "lng": 16.83586
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1762863312",
+    "name": "Elk › North-west",
+    "location": "Elk, Poland",
+    "description": "Live webcam from Elk, Poland",
+    "source": "windy",
+    "windyId": "1762863312",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.80287,
+      "lng": 22.34672
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793891256",
+    "name": "Olsztyn",
+    "location": "Olsztyn, Poland",
+    "description": "Live webcam from Olsztyn, Poland",
+    "source": "windy",
+    "windyId": "1793891256",
+    "category": "Live",
+    "coordinates": {
+      "lat": 53.77855,
+      "lng": 20.48029
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1678166464",
+    "name": "Kiel",
+    "location": "Kiel, Germany",
+    "description": "Live webcam from Kiel, Germany",
+    "source": "windy",
+    "windyId": "1678166464",
+    "category": "Live",
+    "coordinates": {
+      "lat": 54.3034,
+      "lng": 10.1596
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1547822137",
+    "name": "Ingatorp › North-west: Jönköpings län, Sverige: Valbacken",
+    "location": "Ingatorp, Sweden",
+    "description": "Live webcam from Ingatorp, Sweden",
+    "source": "windy",
+    "windyId": "1547822137",
+    "category": "Live",
+    "coordinates": {
+      "lat": 57.64331,
+      "lng": 15.41996
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1669550672",
+    "name": "Stora Strangsbo › North: V&auml;ster&aring;s",
+    "location": "unknown, Sweden",
+    "description": "Live webcam from unknown, Sweden",
+    "source": "windy",
+    "windyId": "1669550672",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.7,
+      "lng": 16.48
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1663964694",
+    "name": "Vastberga › North-east: Tpl",
+    "location": "unknown, Sweden",
+    "description": "Live webcam from unknown, Sweden",
+    "source": "windy",
+    "windyId": "1663964694",
+    "category": "Live",
+    "coordinates": {
+      "lat": 59.29599,
+      "lng": 18.00415
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1793875438",
+    "name": "Muratsi kula",
+    "location": "unknown, Estonia",
+    "description": "Live webcam from unknown, Estonia",
+    "source": "windy",
+    "windyId": "1793875438",
+    "category": "Live",
+    "coordinates": {
+      "lat": 58.23056,
+      "lng": 22.57583
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1423920599",
+    "name": "Fyrudden › South-east: Östergötland, Sweden 2",
+    "location": "Fyrudden, Sweden",
+    "description": "Live webcam from Fyrudden, Sweden",
+    "source": "windy",
+    "windyId": "1423920599",
+    "category": "Live",
+    "coordinates": {
+      "lat": 58.19209,
+      "lng": 16.85223
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1475584817",
+    "name": "Kalmar › North-west: Ölandsbron Högbro västerut",
+    "location": "Kalmar, Sweden",
+    "description": "Live webcam from Kalmar, Sweden",
+    "source": "windy",
+    "windyId": "1475584817",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.68042,
+      "lng": 16.38726
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1653158593",
+    "name": "Palanga: Palanga Pier",
+    "location": "Palanga, Lithuania",
+    "description": "Live webcam from Palanga, Lithuania",
+    "source": "windy",
+    "windyId": "1653158593",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.91993,
+      "lng": 21.0493
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1508364665",
+    "name": "Kurzemite: Kuldīga, Latvia",
+    "location": "Kurzemite, Latvia",
+    "description": "Live webcam from Kurzemite, Latvia",
+    "source": "windy",
+    "windyId": "1508364665",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.96795,
+      "lng": 21.97129
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1727194405",
+    "name": "Taurage",
+    "location": "Taurage, Lithuania",
+    "description": "Live webcam from Taurage, Lithuania",
+    "source": "windy",
+    "windyId": "1727194405",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.25634,
+      "lng": 22.3039
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1335471782",
+    "name": "Aarhus › North: Kalø Vig › South-East: indsejling Kaløvig bådehavn",
+    "location": "Aarhus, Denmark",
+    "description": "Live webcam from Aarhus, Denmark",
+    "source": "windy",
+    "windyId": "1335471782",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.24426,
+      "lng": 10.3438
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1663965242",
+    "name": "Angas › North-west: Tynneredsmotet Södra",
+    "location": "unknown, Sweden",
+    "description": "Live webcam from unknown, Sweden",
+    "source": "windy",
+    "windyId": "1663965242",
+    "category": "Live",
+    "coordinates": {
+      "lat": 57.65066,
+      "lng": 11.90822
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1664228305",
+    "name": "Malmo › South: Limhamns Småbåtshamn",
+    "location": "Malmo, Sweden",
+    "description": "Live webcam from Malmo, Sweden",
+    "source": "windy",
+    "windyId": "1664228305",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.5844,
+      "lng": 12.91877
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1507155065",
+    "name": "Vestermarie: Bornholm - Ronne Havn, Denmark",
+    "location": "Vestermarie, Denmark",
+    "description": "Live webcam from Vestermarie, Denmark",
+    "source": "windy",
+    "windyId": "1507155065",
+    "category": "Live",
+    "coordinates": {
+      "lat": 55.09908,
+      "lng": 14.69093
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1566246156",
+    "name": "Ljungby › North-east: Norra",
+    "location": "Ljungby, Sweden",
+    "description": "Live webcam from Ljungby, Sweden",
+    "source": "windy",
+    "windyId": "1566246156",
+    "category": "Live",
+    "coordinates": {
+      "lat": 56.85821,
+      "lng": 13.94338
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1653160199",
+    "name": "Toreboda",
+    "location": "Toreboda, Sweden",
+    "description": "Live webcam from Toreboda, Sweden",
+    "source": "windy",
+    "windyId": "1653160199",
+    "category": "Live",
+    "coordinates": {
+      "lat": 58.70708,
+      "lng": 14.12537
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.287Z"
+  },
+  {
+    "id": "windy-1544823929",
+    "name": "Mijanes: Panoramique HD",
+    "location": "Mijanes, France",
+    "description": "Live webcam from Mijanes, France",
+    "source": "windy",
+    "windyId": "1544823929",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.72767,
+      "lng": 2.01683
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1674312279",
+    "name": "Lu Palau",
+    "location": "Lu Palau, Italy",
+    "description": "Live webcam from Lu Palau, Italy",
+    "source": "windy",
+    "windyId": "1674312279",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.17815,
+      "lng": 9.37473
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1793889392",
+    "name": "Torrent: Estación Meteorológica ️​ Torrent - Av. Al Vedat",
+    "location": "Torrent, Spain",
+    "description": "Live webcam from Torrent, Spain",
+    "source": "windy",
+    "windyId": "1793889392",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.4283,
+      "lng": -0.47762
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1426264758",
+    "name": "Ainsa › North-east: Plaza de",
+    "location": "Ainsa, Spain",
+    "description": "Live webcam from Ainsa, Spain",
+    "source": "windy",
+    "windyId": "1426264758",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.41724,
+      "lng": 0.13866
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1793884697",
+    "name": "Valls › North",
+    "location": "Valls, Spain",
+    "description": "Live webcam from Valls, Spain",
+    "source": "windy",
+    "windyId": "1793884697",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.27695,
+      "lng": 1.25117
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1636907620",
+    "name": "Calvia",
+    "location": "Calvia, Spain",
+    "description": "Live webcam from Calvia, Spain",
+    "source": "windy",
+    "windyId": "1636907620",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.51439,
+      "lng": 2.53745
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1793876574",
+    "name": "Sant Lluis",
+    "location": "Sant Lluis, Spain",
+    "description": "Live webcam from Sant Lluis, Spain",
+    "source": "windy",
+    "windyId": "1793876574",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.81337,
+      "lng": 4.2796
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1560327711",
+    "name": "Penta-di-Casinca: Penta di Casinca - Corsica, Francia: Panoramique _ vers _ Nord",
+    "location": "Penta-di-Casinca, France",
+    "description": "Live webcam from Penta-di-Casinca, France",
+    "source": "windy",
+    "windyId": "1560327711",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.46772,
+      "lng": 9.46046
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1589623163",
+    "name": "Laconi",
+    "location": "Laconi, Italy",
+    "description": "Live webcam from Laconi, Italy",
+    "source": "windy",
+    "windyId": "1589623163",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.85013,
+      "lng": 9.05203
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1675341925",
+    "name": "Vanxains",
+    "location": "Vanxains, France",
+    "description": "Live webcam from Vanxains, France",
+    "source": "windy",
+    "windyId": "1675341925",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.23735,
+      "lng": 0.26323
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1684228476",
+    "name": "Saumur",
+    "location": "Saumur, France",
+    "description": "Live webcam from Saumur, France",
+    "source": "windy",
+    "windyId": "1684228476",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.26801,
+      "lng": -0.08891
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1455202501",
+    "name": "Montauban › South: Aérodrome Morin - Védrines",
+    "location": "Montauban, France",
+    "description": "Live webcam from Montauban, France",
+    "source": "windy",
+    "windyId": "1455202501",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.02876,
+      "lng": 1.37614
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1793873695",
+    "name": "Saint-Bonnet-le-Froid",
+    "location": "Saint-Bonnet-le-Froid, France",
+    "description": "Live webcam from Saint-Bonnet-le-Froid, France",
+    "source": "windy",
+    "windyId": "1793873695",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.14001,
+      "lng": 4.43221
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1607085168",
+    "name": "La Chaux: Grange Nicod: Arc-sous-Cicon",
+    "location": "La Chaux, France",
+    "description": "Live webcam from La Chaux, France",
+    "source": "windy",
+    "windyId": "1607085168",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.03362,
+      "lng": 6.41808
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1739811253",
+    "name": "Mereau › South-west: Aérodrome de Vierzon",
+    "location": "Mereau, France",
+    "description": "Live webcam from Mereau, France",
+    "source": "windy",
+    "windyId": "1739811253",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.19649,
+      "lng": 2.06561
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1711197743",
+    "name": "Le Grau-du-Roi",
+    "location": "Le Grau-du-Roi, France",
+    "description": "Live webcam from Le Grau-du-Roi, France",
+    "source": "windy",
+    "windyId": "1711197743",
+    "category": "Live",
+    "coordinates": {
+      "lat": 43.5361,
+      "lng": 4.13603
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1698640461",
+    "name": "Bandol",
+    "location": "Bandol, France",
+    "description": "Live webcam from Bandol, France",
+    "source": "windy",
+    "windyId": "1698640461",
+    "category": "Live",
+    "coordinates": {
+      "lat": 43.13473,
+      "lng": 5.75313
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1516695655",
+    "name": "Grandfontaine › North-west: Le Donon - Grand-Est, France",
+    "location": "Grandfontaine, France",
+    "description": "Live webcam from Grandfontaine, France",
+    "source": "windy",
+    "windyId": "1516695655",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.50621,
+      "lng": 7.14788
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1663996049",
+    "name": "Venoy: Près d'Auxerre et d'Avallon",
+    "location": "Venoy, France",
+    "description": "Live webcam from Venoy, France",
+    "source": "windy",
+    "windyId": "1663996049",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.78946,
+      "lng": 3.67053
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1716996601",
+    "name": "Egletons: Eglefor",
+    "location": "Egletons, France",
+    "description": "Live webcam from Egletons, France",
+    "source": "windy",
+    "windyId": "1716996601",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.40076,
+      "lng": 2.05432
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1737039552",
+    "name": "Costigliole d'Asti › North: Avio Boglietto surface",
+    "location": "Costigliole d'Asti, Italy",
+    "description": "Live webcam from Costigliole d'Asti, Italy",
+    "source": "windy",
+    "windyId": "1737039552",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.75832,
+      "lng": 8.18383
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1351010011",
+    "name": "Charnay-les-Macon: Mâcon-Autoroute A6 en périphérie de Mâcon Sud, vue orientée vers Paris",
+    "location": "Charnay-les-Macon, France",
+    "description": "Live webcam from Charnay-les-Macon, France",
+    "source": "windy",
+    "windyId": "1351010011",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.31056,
+      "lng": 4.79472
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1519813460",
+    "name": "Oz-en-Oisans: Vaujany - Auvergne-Rhône-Alpes, France",
+    "location": "Oz-en-Oisans, France",
+    "description": "Live webcam from Oz-en-Oisans, France",
+    "source": "windy",
+    "windyId": "1519813460",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.12858,
+      "lng": 6.10466
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1448269748",
+    "name": "Blatten › North: Zermatt, Zmutt",
+    "location": "Blatten, Switzerland",
+    "description": "Live webcam from Blatten, Switzerland",
+    "source": "windy",
+    "windyId": "1448269748",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.00669,
+      "lng": 7.71687
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1697031847",
+    "name": "Lantsch: St. Cassian: Biathlon Arena Lenzerheide AG",
+    "location": "Lantsch, Switzerland",
+    "description": "Live webcam from Lantsch, Switzerland",
+    "source": "windy",
+    "windyId": "1697031847",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.69284,
+      "lng": 9.55612
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1714457091",
+    "name": "Schelklingen › South",
+    "location": "Schelklingen, Germany",
+    "description": "Live webcam from Schelklingen, Germany",
+    "source": "windy",
+    "windyId": "1714457091",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.39573,
+      "lng": 9.64636
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1706193609",
+    "name": "Noia › South-west",
+    "location": "Noia, Spain",
+    "description": "Live webcam from Noia, Spain",
+    "source": "windy",
+    "windyId": "1706193609",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.80001,
+      "lng": -8.89172
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1637346177",
+    "name": "Famalicao › North-west",
+    "location": "Famalicao, Portugal",
+    "description": "Live webcam from Famalicao, Portugal",
+    "source": "windy",
+    "windyId": "1637346177",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.586,
+      "lng": -9.07302
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1424806131",
+    "name": "Espinho: Distrito de Aveiro, Portogallo: Praia de - LiveHD°",
+    "location": "Espinho, Portugal",
+    "description": "Live webcam from Espinho, Portugal",
+    "source": "windy",
+    "windyId": "1424806131",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.00186,
+      "lng": -8.64588
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1674128351",
+    "name": "As Nogais",
+    "location": "As Nogais, Spain",
+    "description": "Live webcam from As Nogais, Spain",
+    "source": "windy",
+    "windyId": "1674128351",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.76453,
+      "lng": -7.08455
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1646390081",
+    "name": "Aranda de Duero",
+    "location": "Aranda de Duero, Spain",
+    "description": "Live webcam from Aranda de Duero, Spain",
+    "source": "windy",
+    "windyId": "1646390081",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.65521,
+      "lng": -3.72445
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1726096467",
+    "name": "Vega del Codorno › South-east",
+    "location": "Vega del Codorno, Spain",
+    "description": "Live webcam from Vega del Codorno, Spain",
+    "source": "windy",
+    "windyId": "1726096467",
+    "category": "Live",
+    "coordinates": {
+      "lat": 40.43324,
+      "lng": -1.9288
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1584619519",
+    "name": "Navaquesera › South",
+    "location": "Navaquesera, Spain",
+    "description": "Live webcam from Navaquesera, Spain",
+    "source": "windy",
+    "windyId": "1584619519",
+    "category": "Live",
+    "coordinates": {
+      "lat": 40.42508,
+      "lng": -4.90896
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1738619569",
+    "name": "Siruela: Plaza de España",
+    "location": "Siruela, Spain",
+    "description": "Live webcam from Siruela, Spain",
+    "source": "windy",
+    "windyId": "1738619569",
+    "category": "Live",
+    "coordinates": {
+      "lat": 38.97584,
+      "lng": -5.0495
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1254415053",
+    "name": "La Fuente de San Esteban: Fuente De",
+    "location": "La Fuente de San Esteban, Spain",
+    "description": "Live webcam from La Fuente de San Esteban, Spain",
+    "source": "windy",
+    "windyId": "1254415053",
+    "category": "Live",
+    "coordinates": {
+      "lat": 43.15719,
+      "lng": -4.80791
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1361641258",
+    "name": "Galdakao: Galdakano",
+    "location": "Galdakao, Spain",
+    "description": "Live webcam from Galdakao, Spain",
+    "source": "windy",
+    "windyId": "1361641258",
+    "category": "Live",
+    "coordinates": {
+      "lat": 43.23509,
+      "lng": -2.84367
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1609930790",
+    "name": "Redondo › East",
+    "location": "Redondo, Portugal",
+    "description": "Live webcam from Redondo, Portugal",
+    "source": "windy",
+    "windyId": "1609930790",
+    "category": "Live",
+    "coordinates": {
+      "lat": 38.64983,
+      "lng": -7.55079
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1736785287",
+    "name": "Fuentes de Onoro",
+    "location": "Fuentes de Onoro, Spain",
+    "description": "Live webcam from Fuentes de Onoro, Spain",
+    "source": "windy",
+    "windyId": "1736785287",
+    "category": "Live",
+    "coordinates": {
+      "lat": 40.60194,
+      "lng": -6.81791
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1579001861",
+    "name": "La Muela",
+    "location": "La Muela, Spain",
+    "description": "Live webcam from La Muela, Spain",
+    "source": "windy",
+    "windyId": "1579001861",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.57761,
+      "lng": -1.1099
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1528494382",
+    "name": "Morcenx-la-Nouvelle: Arjuzanx-Les Orgues des Landes",
+    "location": "Morcenx-la-Nouvelle, France",
+    "description": "Live webcam from Morcenx-la-Nouvelle, France",
+    "source": "windy",
+    "windyId": "1528494382",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.02,
+      "lng": -0.85
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1620050139",
+    "name": "San Javier: Pozo Aledo › South-east",
+    "location": "San Javier, Spain",
+    "description": "Live webcam from San Javier, Spain",
+    "source": "windy",
+    "windyId": "1620050139",
+    "category": "Live",
+    "coordinates": {
+      "lat": 37.76751,
+      "lng": -0.74701
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1650888359",
+    "name": "Le Pellerin › East: Embarcadère bac Le Pellerin",
+    "location": "Le Pellerin, France",
+    "description": "Live webcam from Le Pellerin, France",
+    "source": "windy",
+    "windyId": "1650888359",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.20428,
+      "lng": -1.76062
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1544219120",
+    "name": "Saint-Brieuc: Balayage Port",
+    "location": "Saint-Brieuc, France",
+    "description": "Live webcam from Saint-Brieuc, France",
+    "source": "windy",
+    "windyId": "1544219120",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.52,
+      "lng": -2.78
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1489183344",
+    "name": "Penmarc'h: Penmarch-Live",
+    "location": "Penmarc'h, France",
+    "description": "Live webcam from Penmarc'h, France",
+    "source": "windy",
+    "windyId": "1489183344",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.79753,
+      "lng": -4.35342
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.589Z"
+  },
+  {
+    "id": "windy-1633099082",
+    "name": "Palermo › North: Cattedrale di Palermo",
+    "location": "Palermo, Italy",
+    "description": "Live webcam from Palermo, Italy",
+    "source": "windy",
+    "windyId": "1633099082",
+    "category": "Live",
+    "coordinates": {
+      "lat": 38.11123,
+      "lng": 13.35244
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1682853719",
+    "name": "Municipal Unit of Artemisia › East",
+    "location": "Municipal Unit of Artemisia, Greece",
+    "description": "Live webcam from Municipal Unit of Artemisia, Greece",
+    "source": "windy",
+    "windyId": "1682853719",
+    "category": "Live",
+    "coordinates": {
+      "lat": 37.66989,
+      "lng": 20.85179
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1654267775",
+    "name": "Amantea: Campora San Giovanni",
+    "location": "Amantea, Italy",
+    "description": "Live webcam from Amantea, Italy",
+    "source": "windy",
+    "windyId": "1654267775",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.0696,
+      "lng": 16.09905
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1697119337",
+    "name": "Ohrid: Крст Џамија: Webcam Ohrid old town and center",
+    "location": "Ohrid, North Macedonia",
+    "description": "Live webcam from Ohrid, North Macedonia",
+    "source": "windy",
+    "windyId": "1697119337",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.11457,
+      "lng": 20.80071
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1599125947",
+    "name": "Vico del Gargano › South-east",
+    "location": "Vico del Gargano, Italy",
+    "description": "Live webcam from Vico del Gargano, Italy",
+    "source": "windy",
+    "windyId": "1599125947",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.89292,
+      "lng": 15.94775
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1217334263",
+    "name": "Morciano di Leuca: Marina di Torre Vado in Puglia",
+    "location": "Morciano di Leuca, Italy",
+    "description": "Live webcam from Morciano di Leuca, Italy",
+    "source": "windy",
+    "windyId": "1217334263",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.83542,
+      "lng": 18.27413
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1652164541",
+    "name": "Monterotondo",
+    "location": "Monterotondo, Italy",
+    "description": "Live webcam from Monterotondo, Italy",
+    "source": "windy",
+    "windyId": "1652164541",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.0518,
+      "lng": 12.6184
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1638515116",
+    "name": "Salerno",
+    "location": "Salerno, Italy",
+    "description": "Live webcam from Salerno, Italy",
+    "source": "windy",
+    "windyId": "1638515116",
+    "category": "Live",
+    "coordinates": {
+      "lat": 40.64167,
+      "lng": 14.82122
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1724163012",
+    "name": "Kunje › North-west: Utjeha-Bušat",
+    "location": "Kunje, Montenegro",
+    "description": "Live webcam from Kunje, Montenegro",
+    "source": "windy",
+    "windyId": "1724163012",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.00445,
+      "lng": 19.15172
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1695732973",
+    "name": "Piraeus: Viking Cruises - Saturn",
+    "location": "Piraeus, Greece",
+    "description": "Live webcam from Piraeus, Greece",
+    "source": "windy",
+    "windyId": "1695732973",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.90667,
+      "lng": 11.71833
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1711050113",
+    "name": "Cagllavice",
+    "location": "Cagllavice, Kosovo",
+    "description": "Live webcam from Cagllavice, Kosovo",
+    "source": "windy",
+    "windyId": "1711050113",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.63227,
+      "lng": 21.15461
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1761395447",
+    "name": "Trikala › East",
+    "location": "Trikala, Greece",
+    "description": "Live webcam from Trikala, Greece",
+    "source": "windy",
+    "windyId": "1761395447",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.54983,
+      "lng": 21.65907
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1530377624",
+    "name": "Municipal Unit of Solygeia › South-west: Korfos - Peloponnese, Greece",
+    "location": "Municipal Unit of Solygeia, Greece",
+    "description": "Live webcam from Municipal Unit of Solygeia, Greece",
+    "source": "windy",
+    "windyId": "1530377624",
+    "category": "Live",
+    "coordinates": {
+      "lat": 37.76508,
+      "lng": 23.1247
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1591536366",
+    "name": "Skopelos › North-east",
+    "location": "Skopelos, Greece",
+    "description": "Live webcam from Skopelos, Greece",
+    "source": "windy",
+    "windyId": "1591536366",
+    "category": "Live",
+    "coordinates": {
+      "lat": 39.12144,
+      "lng": 23.72995
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1793876469",
+    "name": "Nikisiani: Palaiochori",
+    "location": "Nikisiani, Greece",
+    "description": "Live webcam from Nikisiani, Greece",
+    "source": "windy",
+    "windyId": "1793876469",
+    "category": "Live",
+    "coordinates": {
+      "lat": 40.95055,
+      "lng": 24.18269
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1409947197",
+    "name": "Sunny Beach Resort: © СЛЪНЧЕВ БРЯГ УЕБ КАМЕРА ВРЕМЕТО ПЛАЖ БАСЕЙН АПАРТХОТЕЛ 'GREEN FORT' 'ГРИЙН ФОРТ' 2",
+    "location": "unknown, Bulgaria",
+    "description": "Live webcam from unknown, Bulgaria",
+    "source": "windy",
+    "windyId": "1409947197",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.69487,
+      "lng": 27.71042
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1646929619",
+    "name": "Akdeniz Mahallesi",
+    "location": "Akdeniz Mahallesi, Turkey",
+    "description": "Live webcam from Akdeniz Mahallesi, Turkey",
+    "source": "windy",
+    "windyId": "1646929619",
+    "category": "Live",
+    "coordinates": {
+      "lat": 38.42866,
+      "lng": 27.13421
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1599126465",
+    "name": "Didymoticho",
+    "location": "Didymoticho, Greece",
+    "description": "Live webcam from Didymoticho, Greece",
+    "source": "windy",
+    "windyId": "1599126465",
+    "category": "Live",
+    "coordinates": {
+      "lat": 41.34966,
+      "lng": 26.49691
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1611329932",
+    "name": "Yesil Mahallesi › South: Bursa Yeşil Cami",
+    "location": "Yesil Mahallesi, Turkey",
+    "description": "Live webcam from Yesil Mahallesi, Turkey",
+    "source": "windy",
+    "windyId": "1611329932",
+    "category": "Live",
+    "coordinates": {
+      "lat": 40.18158,
+      "lng": 29.07464
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1760130397",
+    "name": "Feteasca: Vama Leușeni",
+    "location": "Feteasca, Moldova",
+    "description": "Live webcam from Feteasca, Moldova",
+    "source": "windy",
+    "windyId": "1760130397",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.79452,
+      "lng": 28.16184
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1373238237",
+    "name": "Bailesti",
+    "location": "Bailesti, Romania",
+    "description": "Live webcam from Bailesti, Romania",
+    "source": "windy",
+    "windyId": "1373238237",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.01889,
+      "lng": 23.35
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1664276930",
+    "name": "Botosani",
+    "location": "Botosani, Romania",
+    "description": "Live webcam from Botosani, Romania",
+    "source": "windy",
+    "windyId": "1664276930",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.74507,
+      "lng": 26.65999
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1582181262",
+    "name": "Azuga",
+    "location": "Azuga, Romania",
+    "description": "Live webcam from Azuga, Romania",
+    "source": "windy",
+    "windyId": "1582181262",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.44436,
+      "lng": 25.56682
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1793889369",
+    "name": "Bistrita › South: Strada Gării",
+    "location": "Bistrita, Romania",
+    "description": "Live webcam from Bistrita, Romania",
+    "source": "windy",
+    "windyId": "1793889369",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.1324,
+      "lng": 24.48892
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1749022236",
+    "name": "Constanța: Zoom Beach",
+    "location": "Constanța, Romania",
+    "description": "Live webcam from Constanța, Romania",
+    "source": "windy",
+    "windyId": "1749022236",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.17672,
+      "lng": 28.65076
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1753604613",
+    "name": "Giurgiulesti: Giurgiulesti Border",
+    "location": "Giurgiulesti, Moldova",
+    "description": "Live webcam from Giurgiulesti, Moldova",
+    "source": "windy",
+    "windyId": "1753604613",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.48254,
+      "lng": 28.19818
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1520935932",
+    "name": "Valevtsi: Hut Mazalat - Balkan Mountains",
+    "location": "Valevtsi, Bulgaria",
+    "description": "Live webcam from Valevtsi, Bulgaria",
+    "source": "windy",
+    "windyId": "1520935932",
+    "category": "Live",
+    "coordinates": {
+      "lat": 42.75858,
+      "lng": 25.11462
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1622241321",
+    "name": "Riccione: Club Nautico Riccione - Scuola di Vela FIV",
+    "location": "Riccione, Italy",
+    "description": "Live webcam from Riccione, Italy",
+    "source": "windy",
+    "windyId": "1622241321",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.00644,
+      "lng": 12.6556
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1608162599",
+    "name": "Masera di Padova › South",
+    "location": "Masera di Padova, Italy",
+    "description": "Live webcam from Masera di Padova, Italy",
+    "source": "windy",
+    "windyId": "1608162599",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.31526,
+      "lng": 11.88537
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1262881408",
+    "name": "Kreuth: Blick auf den Tegernsee",
+    "location": "Kreuth, Germany",
+    "description": "Live webcam from Kreuth, Germany",
+    "source": "windy",
+    "windyId": "1262881408",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.68769,
+      "lng": 11.73666
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1644080751",
+    "name": "Dellach im Drautal › North: Kreuzeckgruppe",
+    "location": "Dellach im Drautal, Austria",
+    "description": "Live webcam from Dellach im Drautal, Austria",
+    "source": "windy",
+    "windyId": "1644080751",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.76034,
+      "lng": 13.07215
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1186150936",
+    "name": "Weyregg am Attersee: Weyregg - Österreich, Oberösterreich: Blick vom Cafe Eichhorn auf den Attersee",
+    "location": "Weyregg am Attersee, Austria",
+    "description": "Live webcam from Weyregg am Attersee, Austria",
+    "source": "windy",
+    "windyId": "1186150936",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.89832,
+      "lng": 13.57118
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1600352267",
+    "name": "Triest: Citta Nuova-Barriera Nuova-San Vito-Citta Vecchia: Trieste - Borsa square webcam live",
+    "location": "Triest, Italy",
+    "description": "Live webcam from Triest, Italy",
+    "source": "windy",
+    "windyId": "1600352267",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.65035,
+      "lng": 13.77159
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1634472209",
+    "name": "Mahala: GP Bosanski Brod - Izlaz iz BiH",
+    "location": "unknown, Bosnia and Herzegovina",
+    "description": "Live webcam from unknown, Bosnia and Herzegovina",
+    "source": "windy",
+    "windyId": "1634472209",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.14785,
+      "lng": 18.00517
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1635684752",
+    "name": "Gemeinde Puchberg am Schneeberg › North-west",
+    "location": "Gemeinde Puchberg am Schneeberg, Austria",
+    "description": "Live webcam from Gemeinde Puchberg am Schneeberg, Austria",
+    "source": "windy",
+    "windyId": "1635684752",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.7616,
+      "lng": 15.82658
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1522355178",
+    "name": "Pag: webcam - town marina",
+    "location": "Pag, Croatia",
+    "description": "Live webcam from Pag, Croatia",
+    "source": "windy",
+    "windyId": "1522355178",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.44373,
+      "lng": 15.05438
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1387181920",
+    "name": "Igrane: Webcam Live - Central beach",
+    "location": "Igrane, Croatia",
+    "description": "Live webcam from Igrane, Croatia",
+    "source": "windy",
+    "windyId": "1387181920",
+    "category": "Live",
+    "coordinates": {
+      "lat": 43.19501,
+      "lng": 17.13999
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1674126692",
+    "name": "Orkeny: Rajcsur: Örkény -> Budapest",
+    "location": "Orkeny, Hungary",
+    "description": "Live webcam from Orkeny, Hungary",
+    "source": "windy",
+    "windyId": "1674126692",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.1274,
+      "lng": 19.4275
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1642458879",
+    "name": "Kosjeric Municipality",
+    "location": "Kosjeric Municipality, Serbia",
+    "description": "Live webcam from Kosjeric Municipality, Serbia",
+    "source": "windy",
+    "windyId": "1642458879",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.1199,
+      "lng": 19.97682
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1628153224",
+    "name": "Nova Crnja Municipality: Jimbolia",
+    "location": "Nova Crnja Municipality, Serbia",
+    "description": "Live webcam from Nova Crnja Municipality, Serbia",
+    "source": "windy",
+    "windyId": "1628153224",
+    "category": "Live",
+    "coordinates": {
+      "lat": 45.78983,
+      "lng": 20.71875
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1521973763",
+    "name": "District of Banská Bystrica › North: Banská Bystrica town",
+    "location": "District of Banská Bystrica, Slovakia",
+    "description": "Live webcam from District of Banská Bystrica, Slovakia",
+    "source": "windy",
+    "windyId": "1521973763",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.718,
+      "lng": 19.15372
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1256992769",
+    "name": "Valaska - Piesok: Zochova Chata",
+    "location": "Valaska - Piesok, Slovakia",
+    "description": "Live webcam from Valaska - Piesok, Slovakia",
+    "source": "windy",
+    "windyId": "1256992769",
+    "category": "Live",
+    "coordinates": {
+      "lat": 48.37914,
+      "lng": 17.27718
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1620245351",
+    "name": "Debrecen › North: Kossuth tér",
+    "location": "Debrecen, Hungary",
+    "description": "Live webcam from Debrecen, Hungary",
+    "source": "windy",
+    "windyId": "1620245351",
+    "category": "Live",
+    "coordinates": {
+      "lat": 47.53115,
+      "lng": 21.62461
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1627443067",
+    "name": "Kozminci: A4, Maribor - Gruškovje, Zakl",
+    "location": "Kozminci, Slovenia",
+    "description": "Live webcam from Kozminci, Slovenia",
+    "source": "windy",
+    "windyId": "1627443067",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.29239,
+      "lng": 15.85577
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1640020649",
+    "name": "Rosia Montana: Vartop2",
+    "location": "Rosia Montana, Romania",
+    "description": "Live webcam from Rosia Montana, Romania",
+    "source": "windy",
+    "windyId": "1640020649",
+    "category": "Live",
+    "coordinates": {
+      "lat": 46.32405,
+      "lng": 23.08983
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  },
+  {
+    "id": "windy-1487247610",
+    "name": "Case di Civago › North: Civago",
+    "location": "Case di Civago, Italy",
+    "description": "Live webcam from Case di Civago, Italy",
+    "source": "windy",
+    "windyId": "1487247610",
+    "category": "Live",
+    "coordinates": {
+      "lat": 44.25367,
+      "lng": 10.47513
+    },
+    "enabled": true,
+    "lastUpdated": "2026-01-11T06:42:48.883Z"
+  }
+]
