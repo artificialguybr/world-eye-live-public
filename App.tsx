@@ -16,13 +16,16 @@ const App: React.FC = () => {
   const [showMinimap, setShowMinimap] = useState(false);
   const [mapInstance, setMapInstance] = useState<any>(null);
   const [cameras, setCameras] = useState<Camera[]>(YOUTUBE_CAMERAS_ONLY);
+  const [isLoadingCameras, setIsLoadingCameras] = useState(false);
 
-  // Load cameras from Windy API on mount
+  // Load cameras from Windy API on mount (with aggressive caching)
   useEffect(() => {
+    setIsLoadingCameras(true);
     loadCameras().then(loadedCameras => {
-      if (loadedCameras.length > cameras.length) {
+      if (loadedCameras.length > YOUTUBE_CAMERAS_ONLY.length) {
         setCameras(loadedCameras);
       }
+      setIsLoadingCameras(false);
     });
   }, []);
 
@@ -162,6 +165,16 @@ const App: React.FC = () => {
             </div>
           </div>
         )}
+
+        {/* Top Bar: Brand & Status */}
+        <div className="absolute top-6 right-8 z-20 flex items-center gap-2 pointer-events-none">
+          <span className="text-xs tracking-[0.2em] uppercase text-white/50 font-mono">
+            {isLoadingCameras ? '...' : cameras.length}
+          </span>
+          <span className="text-[10px] tracking-[0.3em] uppercase text-red-500 font-semibold">
+            LIVE now
+          </span>
+        </div>
 
         {/* Top Bar: Brand & Status */}
         <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-start z-50 pointer-events-none">

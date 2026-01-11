@@ -1,6 +1,10 @@
 const WINDY_API_BASE = 'https://api.windy.com';
 const WINDY_API_KEY = process.env.WINDY_API_KEY;
 
+export const config = {
+  runtime: 'edge',
+};
+
 export interface BoundingBox {
   west?: string | number;
   north?: string | number;
@@ -118,6 +122,74 @@ export default async function handler(request: Request) {
   }
 }
 
-export const config = {
-  runtime: 'edge',
-};
+/**
+ * GET /api/windy/all-webcams
+ * Fetch ALL webcams from Windy API with long cache (4 hours)
+ */
+export async function GET(request: Request) {
+  try {
+    if (!WINDY_API_KEY) {
+      return new Response(
+        JSON.stringify({ error: 'WINDY_API_KEY not configured' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const { searchParams } = new URL(request.url);
+    const path = searchParams.get('path') || '';
+
+    // Route to different endpoints
+    if (path === 'all-webcams') {
+      return fetchAllWebcams();
+    }
+
+    // Default behavior (for backward compatibility)
+    return handler(request);
+  } catch (error) {
+    console.error('Error in Windy proxy:', error);
+    return new Response(
+      JSON.stringify({ error: 'Internal server error' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+}
+
+/**
+ * Fetch all webcams with extended cache (4 hours)
+ */
+async function fetchAllWebcams() {
+  try {
+    // Use Windy's export endpoint for all webcams
+    const response = await fetch(`${WINDY_API_BASE}/webcams/export/all-webcams.json`, {
+      headers: {
+        'x-windy-api-key': WINDY_API_KEY,
+      },
+    });
+
+    if (!response.ok) {
+      console.error('Windy all-webcams error:', response.status, response.statusText);
+      return new Response(
+        JSON.stringify({ error: 'Failed to fetch all webcams from Windy' }),
+        { status: response.status, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const data = await response.json();
+
+    // Extended cache: 4 hours (14400 seconds)
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=14400, s-maxage=14400',
+        'X-Cache-For': '4-hours',
+      },
+    });
+  } catch (error) {
+    console.error('Error fetching all webcams:', error);
+    return new Response(
+      JSON.stringify({ error: 'Internal server error' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+}

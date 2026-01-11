@@ -51,7 +51,31 @@ function getApiBaseUrl(): string {
 }
 
 /**
+ * Fetch ALL webcams from our API proxy with 4-hour cache
+ * This is the preferred method for initial app load
+ */
+export async function fetchAllWebcams(): Promise<Camera[]> {
+  try {
+    const response = await fetch(`${getApiBaseUrl()}?path=all-webcams`, {
+      cache: 'force-cache', // Aggressive caching
+    });
+
+    if (!response.ok) {
+      console.error('API proxy error:', response.status, response.statusText);
+      return [];
+    }
+
+    const data: WindyApiResponse = await response.json();
+    return data.result.webcams.map(windyWebcamToCamera);
+  } catch (error) {
+    console.error('Error fetching all Windy webcams:', error);
+    return [];
+  }
+}
+
+/**
  * Fetch webcams from our API proxy (which hides the Windy API key)
+ * Deprecated - use fetchAllWebcams() instead for better performance
  */
 export async function fetchWebcams(boundingBox?: BoundingBox): Promise<Camera[]> {
   try {

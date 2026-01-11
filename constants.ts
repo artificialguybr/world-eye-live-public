@@ -1,6 +1,6 @@
 import { Camera, CameraCategory } from './types';
 import camerasRaw from './data/cameras.json';
-import { fetchWebcams } from './lib/windy';
+import { fetchAllWebcams } from './lib/windy';
 
 const YOUTUBE_CAMERAS: Camera[] = (camerasRaw as Omit<Camera, 'category' | 'source'>[]).map(cam => ({
   ...cam,
@@ -14,14 +14,14 @@ let cachedCameras: Camera[] | null = null;
 
 /**
  * Load cameras from both YouTube (static JSON) and Windy API (dynamic)
- * Returns a cached result and fetches in background for subsequent calls
+ * Uses cached result with aggressive caching (4 hours from server)
  */
 export async function loadCameras(): Promise<Camera[]> {
   if (cachedCameras) {
     return cachedCameras;
   }
 
-  const windyCameras = await fetchWebcams();
+  const windyCameras = await fetchAllWebcams();
   cachedCameras = [...YOUTUBE_CAMERAS, ...windyCameras];
   return cachedCameras;
 }
