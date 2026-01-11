@@ -3,18 +3,28 @@ import Sidebar from './components/Sidebar';
 import WorldMap from './components/WorldMap';
 import LivePlayer from './components/LivePlayer';
 import Minimap from './components/Minimap';
-import { CAMERAS } from './constants';
+import { YOUTUBE_CAMERAS_ONLY, loadCameras } from './constants';
 import { Camera } from './types';
 
 type ViewMode = 'map' | 'immersive';
 
 const App: React.FC = () => {
-  const [activeCamera, setActiveCamera] = useState<Camera | null>(CAMERAS[0] ?? null);
+  const [activeCamera, setActiveCamera] = useState<Camera | null>(YOUTUBE_CAMERAS_ONLY[0] ?? null);
   const [viewMode, setViewMode] = useState<ViewMode>('map');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [showMinimap, setShowMinimap] = useState(false);
   const [mapInstance, setMapInstance] = useState<any>(null);
+  const [cameras, setCameras] = useState<Camera[]>(YOUTUBE_CAMERAS_ONLY);
+
+  // Load cameras from Windy API on mount
+  useEffect(() => {
+    loadCameras().then(loadedCameras => {
+      if (loadedCameras.length > cameras.length) {
+        setCameras(loadedCameras);
+      }
+    });
+  }, []);
 
   // Reset iframe state when camera changes
   useEffect(() => {
@@ -57,14 +67,14 @@ const App: React.FC = () => {
 
   const handleShuffle = useCallback(() => {
     if (!activeCamera) return;
-    const currentIndex = CAMERAS.findIndex(c => c.id === activeCamera.id);
-    let nextIndex = Math.floor(Math.random() * CAMERAS.length);
-    while (nextIndex === currentIndex && CAMERAS.length > 1) {
-      nextIndex = Math.floor(Math.random() * CAMERAS.length);
+    const currentIndex = cameras.findIndex(c => c.id === activeCamera.id);
+    let nextIndex = Math.floor(Math.random() * cameras.length);
+    while (nextIndex === currentIndex && cameras.length > 1) {
+      nextIndex = Math.floor(Math.random() * cameras.length);
     }
-    setActiveCamera(CAMERAS[nextIndex]);
+    setActiveCamera(cameras[nextIndex]);
     if (viewMode === 'map') setViewMode('immersive');
-  }, [activeCamera, viewMode]);
+  }, [activeCamera, viewMode, cameras]);
 
   // Keyboard and mouse navigation for shuffle
   useEffect(() => {
@@ -117,7 +127,7 @@ const App: React.FC = () => {
         className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${viewMode === 'map' ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
         <WorldMap
-          cameras={CAMERAS}
+          cameras={cameras}
           onSelectCamera={handleCameraSelect}
           onOpenList={() => setIsSidebarOpen(true)}
           onShuffle={handleShuffle}
@@ -249,6 +259,7 @@ const App: React.FC = () => {
       </div>
 
       <Sidebar
+        cameras={cameras}
         selectedCameraId={activeCamera?.id ?? ''}
         onSelectCamera={handleCameraSelect}
         isOpen={isSidebarOpen}

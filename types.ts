@@ -1,10 +1,15 @@
+export type CameraSource = 'youtube' | 'windy';
+
 export interface Camera {
   id: string;
   name: string;
   location: string;
   description: string;
+  source?: CameraSource;
   youtubeId?: string;
   thumbnail?: string;
+  windyId?: string;
+  windyPlayerUrl?: string;
   category: CameraCategory;
   coordinates: {
     lat: number;

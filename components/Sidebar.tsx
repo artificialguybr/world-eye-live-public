@@ -1,24 +1,24 @@
 import React, { useMemo, useState } from 'react';
-import { CAMERAS } from '../constants';
 import { Camera } from '../types';
 
 interface SidebarProps {
+  cameras: Camera[];
   selectedCameraId: string;
   onSelectCamera: (cam: Camera) => void;
   isOpen: boolean;
   onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ cameras, selectedCameraId, onSelectCamera, isOpen, onClose }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredCameras = useMemo(() => {
-    return CAMERAS.filter(c => {
+    return cameras.filter(c => {
       const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             c.location.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesSearch;
     });
-  }, [searchQuery]);
+  }, [searchQuery, cameras]);
 
   if (!isOpen) return null;
 
@@ -69,12 +69,27 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedCameraId, onSelectCamera, isO
               className={`w-full text-left p-3 md:p-4 rounded-xl md:rounded-2xl transition-all group relative overflow-hidden flex items-center gap-3 md:gap-4 ${selectedCameraId === cam.id ? 'bg-white/10' : 'hover:bg-white/5'}`}
             >
               <div className="w-32 h-20 rounded-xl bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
-                <img
-                  alt={cam.name}
-                  className="w-full h-full object-cover"
-                  src={`https://img.youtube.com/vi/${cam.youtubeId}/mqdefault.jpg`}
-                  loading="lazy"
-                />
+                {cam.thumbnail ? (
+                  <img
+                    alt={cam.name}
+                    className="w-full h-full object-cover"
+                    src={cam.thumbnail}
+                    loading="lazy"
+                  />
+                ) : cam.youtubeId ? (
+                  <img
+                    alt={cam.name}
+                    className="w-full h-full object-cover"
+                    src={`https://img.youtube.com/vi/${cam.youtubeId}/mqdefault.jpg`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center text-white/20">
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                )}
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className={`text-sm font-medium ${selectedCameraId === cam.id ? 'text-white' : 'text-gray-200 group-hover:text-white'}`}>
