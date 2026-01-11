@@ -63,6 +63,8 @@ export interface WindyApiResponse {
   };
   webcams?: WindyWebcam[];
   webcam?: WindyWebcam;
+  // Some endpoints return a flat webcam object directly
+  webcamId?: number;
 }
 
 /**
@@ -225,7 +227,10 @@ function extractWebcams(data: WindyApiResponse): WindyWebcam[] {
 }
 
 function extractWebcam(data: WindyApiResponse): WindyWebcam | null {
-  return data.result?.webcam ?? data.webcam ?? null;
+  if (data.result?.webcam) return data.result.webcam;
+  if (data.webcam) return data.webcam;
+  if (data.webcamId) return data as unknown as WindyWebcam;
+  return null;
 }
 
 /**
