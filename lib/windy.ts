@@ -1,5 +1,9 @@
 import { Camera, CameraCategory, CameraSource } from '../types';
 
+const WINDY_API_BASE = 'https://api.windy.com';
+const API_KEY = import.meta.env.VITE_WINDY_API_KEY;
+const WINDY_INCLUDE = 'location,images,player,urls';
+
 export interface BoundingBox {
   minLat?: number;
   minLng?: number;
@@ -9,7 +13,8 @@ export interface BoundingBox {
 
 export interface WindyWebcam {
   webcamId: string;
-  name: string;
+  name?: string;
+  title?: string;
   location: {
     city: string;
     country: string;
@@ -17,25 +22,40 @@ export interface WindyWebcam {
     longitude: number;
   };
   status: string;
-  image: {
+  image?: {
     current: {
-      thumbnail: string;
-      daylight: string;
+      thumbnail?: string;
+      daylight?: string;
     };
   };
-  url: {
-    player: {
-      day: string;
-      live: string;
+  images?: {
+    current?: {
+      thumbnail?: string;
+      daylight?: string;
+    };
+  };
+  url?: {
+    player?: {
+      day?: string;
+      live?: string;
+    } | null;
+  };
+  urls?: {
+    player?: {
+      day?: string;
+      live?: string;
     } | null;
   };
   categories?: string[];
 }
 
 export interface WindyApiResponse {
-  result: {
-    webcams: WindyWebcam[];
+  result?: {
+    webcams?: WindyWebcam[];
+    webcam?: WindyWebcam;
   };
+  webcams?: WindyWebcam[];
+  webcam?: WindyWebcam;
 }
 
 /**
@@ -66,7 +86,8 @@ export async function fetchAllWebcams(): Promise<Camera[]> {
     }
 
     const data: WindyApiResponse = await response.json();
-    return data.result.webcams.map(windyWebcamToCamera);
+    const webcams = extractWebcams(data);
+    return webcams.map(windyWebcamToCamera);
   } catch (error) {
     console.error('Error fetching all Windy webcams:', error);
     return [];
@@ -97,7 +118,8 @@ export async function fetchWebcams(boundingBox?: BoundingBox): Promise<Camera[]>
     }
 
     const data: WindyApiResponse = await response.json();
-    return data.result.webcams.map(windyWebcamToCamera);
+    const webcams = extractWebcams(data);
+    return webcams.map(windyWebcamToCamera);
   } catch (error) {
     console.error('Error fetching Windy webcams:', error);
     return [];
@@ -109,15 +131,17 @@ export async function fetchWebcams(boundingBox?: BoundingBox): Promise<Camera[]>
  */
 export async function fetchWebcamById(id: string): Promise<Camera | null> {
   try {
-    const response = await fetch(`${getApiBaseUrl()}?id=${id}`);
+    const params = new URLSearchParams({ id, include: WINDY_INCLUDE });
+    const response = await fetch(`${getApiBaseUrl()}?${params.toString()}`);
 
     if (!response.ok) {
       console.error('API proxy error:', response.status, response.statusText);
       return null;
     }
 
-    const data: { result: { webcam: WindyWebcam } } = await response.json();
-    return windyWebcamToCamera(data.result.webcam);
+    const data: WindyApiResponse = await response.json();
+    const webcam = extractWebcam(data);
+    return webcam ? windyWebcamToCamera(webcam) : null;
   } catch (error) {
     console.error('Error fetching Windy webcam:', error);
     return null;
@@ -160,23 +184,36 @@ function windyWebcamToCamera(windy: WindyWebcam): Camera {
   const category = mapWindyCategoryToCameraCategory(windy.categories);
   const location = windy.location ? 
     `${windy.location.city || ''}, ${windy.location.country || ''}`.trim() : 
-    windy.name;
+    (windy.name || windy.title || 'Windy Webcam');
 
   return {
     id: `windy-${windy.webcamId}`,
-    name: windy.name,
+    name: windy.name || windy.title || 'Windy Webcam',
     location: location,
     description: `Live webcam from ${location}`,
     source: 'windy' as CameraSource,
     windyId: windy.webcamId,
-    windyPlayerUrl: windy.url?.player?.live || windy.url?.player?.day || undefined,
-    thumbnail: windy.image.current.thumbnail,
+    windyPlayerUrl:
+      windy.url?.player?.live ||
+      windy.url?.player?.day ||
+      windy.urls?.player?.live ||
+      windy.urls?.player?.day ||
+      undefined,
+    thumbnail: windy.image?.current?.thumbnail || windy.images?.current?.thumbnail,
     category,
     coordinates: {
       lat: windy.location?.latitude || 0,
       lng: windy.location?.longitude || 0,
     },
   };
+}
+
+function extractWebcams(data: WindyApiResponse): WindyWebcam[] {
+  return data.result?.webcams ?? data.webcams ?? [];
+}
+
+function extractWebcam(data: WindyApiResponse): WindyWebcam | null {
+  return data.result?.webcam ?? data.webcam ?? null;
 }
 
 /**

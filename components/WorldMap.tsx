@@ -59,9 +59,13 @@ const WorldMap: React.FC<WorldMapProps> = ({ cameras, onSelectCamera, onOpenList
   };
 
   const camerasWithTz = useMemo(() => {
+    const camerasWithCoords = cameras.filter(cam =>
+      Number.isFinite(cam.coordinates?.lat) && Number.isFinite(cam.coordinates?.lng)
+    );
+
     // Limit markers on mobile to improve performance
-    const maxMarkers = isMobile ? 100 : Math.min(cameras.length, 300);
-    const camerasToProcess = cameras.slice(0, maxMarkers);
+    const maxMarkers = isMobile ? 100 : Math.min(camerasWithCoords.length, 300);
+    const camerasToProcess = camerasWithCoords.slice(0, maxMarkers);
 
     return camerasToProcess.map(cam => {
       let timeZone = cam.timeZone;

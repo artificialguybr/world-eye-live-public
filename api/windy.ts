@@ -68,12 +68,18 @@ export default async function handler(request: Request) {
     const north = searchParams.get('north');
     const east = searchParams.get('east');
     const south = searchParams.get('south');
+    const include = searchParams.get('include');
 
     // Build Windy API URL
     let windyUrl: string;
 
     if (webcamId) {
       windyUrl = `${WINDY_API_BASE}/webcams/api/v3/webcams/${webcamId}`;
+      const params = new URLSearchParams();
+      if (include) params.append('include', include);
+      if (params.toString()) {
+        windyUrl += `?${params.toString()}`;
+      }
     } else {
       windyUrl = `${WINDY_API_BASE}/webcams/api/v3/webcams`;
 
@@ -82,6 +88,7 @@ export default async function handler(request: Request) {
       if (north) params.append('north', north);
       if (east) params.append('east', east);
       if (south) params.append('south', south);
+      if (include) params.append('include', include);
 
       if (params.toString()) {
         windyUrl += `?${params.toString()}`;

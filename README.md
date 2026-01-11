@@ -1,16 +1,16 @@
 # WorldEyeMap 🌍
 
-Real-time webcam viewer featuring 600+ YouTube live streams and 1000+ Windy webcams from around the world.
+Real-time webcam viewer featuring 600+ YouTube live streams and up to 1000 Windy webcams from around the world.
 
 ## ✨ Features
 
-- **1600+ Live Streams**: 600+ YouTube webcams + 1000+ Windy webcams from worldwide locations
+- **1600+ Live Streams**: 600+ YouTube webcams + up to 1000 Windy webcams from worldwide locations
 - **Interactive World Map**: Visual exploration of cameras by geographic location
 - **Immersive View**: Full-screen live streaming experience
 - **Shuffle Mode**: Randomly explore different locations with one click
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Dark Theme**: Sleek dark mode interface for comfortable viewing
-- **Secure API Integration**: Windy API key protected via Vercel Edge Functions
+- **Secure API Integration**: Windy API key protected via Vercel Edge Functions (on-demand details)
 
 ## 🚀 Getting Started
 

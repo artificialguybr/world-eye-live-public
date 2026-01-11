@@ -1,33 +1,30 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Sidebar from './components/Sidebar';
 import WorldMap from './components/WorldMap';
 import LivePlayer from './components/LivePlayer';
 import Minimap from './components/Minimap';
-import { YOUTUBE_CAMERAS_ONLY, loadCameras } from './constants';
+import { ALL_CAMERAS } from './constants';
 import { Camera } from './types';
+import { fetchWebcamById } from './lib/windy';
 
 type ViewMode = 'map' | 'immersive';
 
 const App: React.FC = () => {
-  const [activeCamera, setActiveCamera] = useState<Camera | null>(YOUTUBE_CAMERAS_ONLY[0] ?? null);
+  const [activeCamera, setActiveCamera] = useState<Camera | null>(ALL_CAMERAS[0] ?? null);
   const [viewMode, setViewMode] = useState<ViewMode>('map');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [showMinimap, setShowMinimap] = useState(false);
   const [mapInstance, setMapInstance] = useState<any>(null);
-  const [cameras, setCameras] = useState<Camera[]>(YOUTUBE_CAMERAS_ONLY);
-  const [isLoadingCameras, setIsLoadingCameras] = useState(false);
+  const [windyDetails, setWindyDetails] = useState<Record<string, Camera>>({});
+  const cameras = ALL_CAMERAS;
 
-  // Load cameras from Windy API on mount (with aggressive caching)
-  useEffect(() => {
-    setIsLoadingCameras(true);
-    loadCameras().then(loadedCameras => {
-      if (loadedCameras.length > YOUTUBE_CAMERAS_ONLY.length) {
-        setCameras(loadedCameras);
-      }
-      setIsLoadingCameras(false);
-    });
-  }, []);
+  const resolvedActiveCamera = useMemo(() => {
+    if (!activeCamera) return null;
+    if (activeCamera.source !== 'windy') return activeCamera;
+    const details = windyDetails[activeCamera.id];
+    return details ? { ...activeCamera, ...details } : activeCamera;
+  }, [activeCamera, windyDetails]);
 
   // Reset iframe state when camera changes
   useEffect(() => {
@@ -35,6 +32,29 @@ const App: React.FC = () => {
     setIframeLoaded(false);
     setShowMinimap(false);
   }, [activeCamera?.id]);
+
+  // Fetch Windy details (player/images) on-demand
+  useEffect(() => {
+    if (!activeCamera) return;
+    if (activeCamera.source !== 'windy') return;
+    if (!activeCamera.windyId) return;
+    if (windyDetails[activeCamera.id]) return;
+
+    let cancelled = false;
+
+    fetchWebcamById(String(activeCamera.windyId))
+      .then((details) => {
+        if (!details || cancelled) return;
+        setWindyDetails(prev => ({ ...prev, [activeCamera.id]: details }));
+      })
+      .catch(() => {
+        // Silent fail; we'll keep the placeholder until next attempt.
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activeCamera, windyDetails]);
 
   const handleCameraSelect = (camera: Camera) => {
     // Cinematic fly-to zoom into camera location before switching views
@@ -143,7 +163,7 @@ const App: React.FC = () => {
         className={`absolute inset-0 z-10 transition-opacity duration-1000 ease-in-out ${viewMode === 'immersive' ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
         {/* Background Video (Only render iframe if in immersive mode to save resources/autoplay issues) */}
-        {viewMode === 'immersive' && activeCamera && (
+        {viewMode === 'immersive' && resolvedActiveCamera && (
           <div className="absolute inset-0 z-0">
             {!iframeLoaded && (
               <div className="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10">
@@ -156,7 +176,7 @@ const App: React.FC = () => {
             <div className="w-full h-full relative">
               <div className={`w-full h-full transition-opacity duration-1000 ${iframeLoaded ? 'opacity-100' : 'opacity-0'}`}>
                 <LivePlayer
-                  camera={activeCamera}
+                  camera={resolvedActiveCamera}
                   onLoaded={() => setIframeLoaded(true)}
                 />
               </div>
@@ -169,7 +189,7 @@ const App: React.FC = () => {
         {/* Top Bar: Brand & Status */}
         <div className="absolute top-6 right-8 z-20 flex items-center gap-2 pointer-events-none">
           <span className="text-xs tracking-[0.2em] uppercase text-white/50 font-mono">
-            {isLoadingCameras ? '...' : cameras.length}
+            {cameras.length}
           </span>
           <span className="text-[10px] tracking-[0.3em] uppercase text-red-500 font-semibold">
             LIVE now
@@ -203,11 +223,11 @@ const App: React.FC = () => {
                 <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                {activeCamera?.location ?? ''}
+                {resolvedActiveCamera?.location ?? ''}
               </div>
-              {activeCamera && (
+              {resolvedActiveCamera && (
                 <h1 className="text-4xl md:text-5xl font-light tracking-tight text-white leading-tight drop-shadow-lg">
-                  {activeCamera.name}
+                  {resolvedActiveCamera.name}
                 </h1>
               )}
             </div>
@@ -216,9 +236,9 @@ const App: React.FC = () => {
           {/* Center: The Dock & Minimap (Only visible in Immersive Mode) */}
           <div className={`absolute left-1/2 bottom-6 md:bottom-10 -translate-x-1/2 ${viewMode === 'immersive' ? 'pointer-events-auto' : ''}`}>
             {/* Minimap Popup */}
-            {showMinimap && activeCamera && (
+            {showMinimap && resolvedActiveCamera && (
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 transition-all duration-300">
-                <Minimap camera={activeCamera} onClose={() => setShowMinimap(false)} />
+                <Minimap camera={resolvedActiveCamera} onClose={() => setShowMinimap(false)} />
               </div>
             )}
 
