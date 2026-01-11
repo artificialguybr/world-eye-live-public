@@ -156,11 +156,13 @@ export async function GET(request: Request) {
 
 /**
  * Fetch all webcams with extended cache (4 hours)
+ * Note: Using /webcams/api/v3/webcams without filters to get all webcams with full data
  */
 async function fetchAllWebcams() {
   try {
-    // Use Windy's export endpoint for all webcams
-    const response = await fetch(`${WINDY_API_BASE}/webcams/export/all-webcams.json`, {
+    // Use Windy's main API endpoint without filters to get all webcams
+    // The export endpoint only has basic data (no location, thumbnails, or player URLs)
+    const response = await fetch(`${WINDY_API_BASE}/webcams/api/v3/webcams`, {
       headers: {
         'x-windy-api-key': WINDY_API_KEY,
       },
