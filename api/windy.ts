@@ -1,12 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-
 const WINDY_API_BASE = 'https://api.windy.com';
 const WINDY_API_KEY = process.env.WINDY_API_KEY;
-
-export const runtime = 'edge';
-export const config = {
-  runtime: 'edge',
-};
 
 export interface BoundingBox {
   west?: string | number;
@@ -56,12 +49,12 @@ export interface WindyApiResponse {
  * - id: Fetch single webcam by ID
  * - west, north, east, south: Bounding box for filtering
  */
-export async function GET(request: NextRequest) {
+export default async function handler(request: Request) {
   try {
     if (!WINDY_API_KEY) {
-      return NextResponse.json(
-        { error: 'WINDY_API_KEY not configured' },
-        { status: 500 }
+      return new Response(
+        JSON.stringify({ error: 'WINDY_API_KEY not configured' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
@@ -100,25 +93,31 @@ export async function GET(request: NextRequest) {
 
     if (!response.ok) {
       console.error('Windy API error:', response.status, response.statusText);
-      return NextResponse.json(
-        { error: 'Failed to fetch from Windy API' },
-        { status: response.status }
+      return new Response(
+        JSON.stringify({ error: 'Failed to fetch from Windy API' }),
+        { status: response.status, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
     const data: WindyApiResponse = await response.json();
 
     // Cache headers (10 min for free tier)
-    return NextResponse.json(data, {
+    return new Response(JSON.stringify(data), {
+      status: 200,
       headers: {
+        'Content-Type': 'application/json',
         'Cache-Control': 'public, max-age=600, s-maxage=600',
       },
     });
   } catch (error) {
     console.error('Error in Windy proxy:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+    return new Response(
+      JSON.stringify({ error: 'Internal server error' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }
 }
+
+export const config = {
+  runtime: 'edge',
+};
